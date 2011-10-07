@@ -1,0 +1,10 @@
+c:\users\ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Debug\carWindow.Form1.resources
+c:\users\ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Debug\carWindow.Properties.Resources.resources
+c:\users\ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\bin\Debug\carWindow.exe
+c:\users\ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\bin\Debug\carWindow.pdb
+c:\users\ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Debug\carWindow.exe
+c:\users\ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Debug\carWindow.pdb
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Debug\carWindow.Form2.resources

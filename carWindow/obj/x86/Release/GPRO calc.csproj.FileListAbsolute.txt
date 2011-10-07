@@ -1,0 +1,18 @@
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\bin\Release\GPRO Calc.exe.config
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\bin\Release\GPRO Calc.exe.manifest
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\bin\Release\GPRO Calc.application
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\bin\Release\GPRO Calc.exe
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\bin\Release\GPRO Calc.pdb
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Release\carWindow.AboutBox1.resources
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Release\GPROCalc.Properties.Resources.resources
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Release\GPRO Calc.TrustInfo.xml
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Release\GPRO Calc.exe.manifest
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Release\GPRO Calc.application
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Release\GPRO Calc.exe
+C:\Users\Ricardo\documents\visual studio 2010\Projects\carWindow\carWindow\obj\x86\Release\GPRO Calc.pdb
+C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\carWindow\obj\x86\Release\carWindow.GproC.resources
+C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\carWindow\bin\Release\GPRO Calc.exe.CodeAnalysisLog.xml
+C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\carWindow\bin\Release\GPRO Calc.exe.lastcodeanalysissucceeded
