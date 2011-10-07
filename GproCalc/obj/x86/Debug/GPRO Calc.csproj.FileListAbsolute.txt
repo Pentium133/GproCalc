@@ -1,14 +1,14 @@
+C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\bin\Debug\GPRO Calc.exe.config
+C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\bin\Debug\GPRO Calc.exe.manifest
+C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\bin\Debug\GPRO Calc.application
+C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\bin\Debug\GPRO Calc.exe
+C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\bin\Debug\GPRO Calc.pdb
 C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\obj\x86\Debug\carWindow.AboutBox1.resources
 C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\obj\x86\Debug\carWindow.GproCalc.resources
 C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\obj\x86\Debug\GPROCalc.Properties.Resources.resources
 C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\obj\x86\Debug\GenerateResource.write.1.tlog
-C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\bin\Debug\GPRO Calc.exe.config
-C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\bin\Debug\GPRO Calc.exe.manifest
-C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\bin\Debug\GPRO Calc.application
-C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\bin\Debug\GPRO Calc.exe
-C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\bin\Debug\GPRO Calc.pdb
 C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\obj\x86\Debug\GPRO Calc.TrustInfo.xml
 C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\obj\x86\Debug\GPRO Calc.exe.manifest
 C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\obj\x86\Debug\GPRO Calc.application
