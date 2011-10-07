@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPRO Calc", "carWindow\GPRO Calc.csproj", "{074BF986-E90C-4C5E-B910-61831FC8A858}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPRO Calc", "GproCalc\GPRO Calc.csproj", "{074BF986-E90C-4C5E-B910-61831FC8A858}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
