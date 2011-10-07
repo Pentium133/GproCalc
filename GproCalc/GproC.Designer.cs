@@ -1179,7 +1179,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(588, 434);
+            this.MinimumSize = new System.Drawing.Size(647, 473);
             this.Name = "GproCalc";
             this.Text = "GPRO Calc";
             this.Load += new System.EventHandler(this.GproC_Load);
