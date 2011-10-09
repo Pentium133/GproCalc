@@ -555,6 +555,36 @@ namespace carWindow
             lPercentagem.Text = sliderOpacidade.Value.ToString() + " %";
         }
 
+        private void asaD3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void asaT3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void motor3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void freios3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cambios3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void suspensao3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
 

@@ -95,6 +95,8 @@
             // 
             resources.ApplyResources(this.okButton, "okButton");
             this.okButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.okButton.MaximumSize = new System.Drawing.Size(101, 23);
+            this.okButton.MinimumSize = new System.Drawing.Size(101, 23);
             this.okButton.Name = "okButton";
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
             // 

@@ -179,16 +179,16 @@
             this.gBoxRain.Controls.Add(this.motor2);
             this.gBoxRain.Controls.Add(this.asaT2);
             this.gBoxRain.Controls.Add(this.asaD2);
-            this.gBoxRain.Location = new System.Drawing.Point(274, 7);
+            this.gBoxRain.Location = new System.Drawing.Point(245, 7);
             this.gBoxRain.Name = "gBoxRain";
-            this.gBoxRain.Size = new System.Drawing.Size(319, 195);
+            this.gBoxRain.Size = new System.Drawing.Size(348, 185);
             this.gBoxRain.TabIndex = 1;
             this.gBoxRain.TabStop = false;
             this.gBoxRain.Text = "Chuva";
             // 
             // bMolh_sec
             // 
-            this.bMolh_sec.Location = new System.Drawing.Point(46, 105);
+            this.bMolh_sec.Location = new System.Drawing.Point(50, 96);
             this.bMolh_sec.Name = "bMolh_sec";
             this.bMolh_sec.Size = new System.Drawing.Size(106, 23);
             this.bMolh_sec.TabIndex = 1;
@@ -198,7 +198,7 @@
             // 
             // bSec_molh
             // 
-            this.bSec_molh.Location = new System.Drawing.Point(46, 56);
+            this.bSec_molh.Location = new System.Drawing.Point(50, 65);
             this.bSec_molh.Name = "bSec_molh";
             this.bSec_molh.Size = new System.Drawing.Size(106, 23);
             this.bSec_molh.TabIndex = 0;
@@ -208,7 +208,7 @@
             // 
             // suspensao2
             // 
-            this.suspensao2.Location = new System.Drawing.Point(198, 165);
+            this.suspensao2.Location = new System.Drawing.Point(236, 146);
             this.suspensao2.Name = "suspensao2";
             this.suspensao2.ReadOnly = true;
             this.suspensao2.Size = new System.Drawing.Size(100, 20);
@@ -216,7 +216,7 @@
             // 
             // cambio2
             // 
-            this.cambio2.Location = new System.Drawing.Point(198, 135);
+            this.cambio2.Location = new System.Drawing.Point(236, 120);
             this.cambio2.Name = "cambio2";
             this.cambio2.ReadOnly = true;
             this.cambio2.Size = new System.Drawing.Size(100, 20);
@@ -224,7 +224,7 @@
             // 
             // freios2
             // 
-            this.freios2.Location = new System.Drawing.Point(198, 105);
+            this.freios2.Location = new System.Drawing.Point(236, 94);
             this.freios2.Name = "freios2";
             this.freios2.ReadOnly = true;
             this.freios2.Size = new System.Drawing.Size(100, 20);
@@ -232,7 +232,7 @@
             // 
             // motor2
             // 
-            this.motor2.Location = new System.Drawing.Point(198, 75);
+            this.motor2.Location = new System.Drawing.Point(236, 68);
             this.motor2.Name = "motor2";
             this.motor2.ReadOnly = true;
             this.motor2.Size = new System.Drawing.Size(100, 20);
@@ -240,7 +240,7 @@
             // 
             // asaT2
             // 
-            this.asaT2.Location = new System.Drawing.Point(198, 45);
+            this.asaT2.Location = new System.Drawing.Point(236, 42);
             this.asaT2.Name = "asaT2";
             this.asaT2.ReadOnly = true;
             this.asaT2.Size = new System.Drawing.Size(100, 20);
@@ -248,7 +248,7 @@
             // 
             // asaD2
             // 
-            this.asaD2.Location = new System.Drawing.Point(198, 15);
+            this.asaD2.Location = new System.Drawing.Point(236, 16);
             this.asaD2.Name = "asaD2";
             this.asaD2.ReadOnly = true;
             this.asaD2.Size = new System.Drawing.Size(100, 20);
@@ -265,9 +265,9 @@
             this.gBoxQ1Q2.Controls.Add(this.asaT3);
             this.gBoxQ1Q2.Controls.Add(this.asaD3);
             this.gBoxQ1Q2.Controls.Add(this.bCalcTempHum);
-            this.gBoxQ1Q2.Location = new System.Drawing.Point(7, 208);
+            this.gBoxQ1Q2.Location = new System.Drawing.Point(7, 198);
             this.gBoxQ1Q2.Name = "gBoxQ1Q2";
-            this.gBoxQ1Q2.Size = new System.Drawing.Size(586, 156);
+            this.gBoxQ1Q2.Size = new System.Drawing.Size(586, 166);
             this.gBoxQ1Q2.TabIndex = 2;
             this.gBoxQ1Q2.TabStop = false;
             this.gBoxQ1Q2.Text = "Conversor de Q1 para Q2";
@@ -376,51 +376,57 @@
             // 
             // suspensao3
             // 
-            this.suspensao3.Location = new System.Drawing.Point(437, 128);
+            this.suspensao3.Location = new System.Drawing.Point(465, 130);
             this.suspensao3.Name = "suspensao3";
             this.suspensao3.ReadOnly = true;
             this.suspensao3.Size = new System.Drawing.Size(100, 20);
             this.suspensao3.TabIndex = 8;
+            this.suspensao3.TextChanged += new System.EventHandler(this.suspensao3_TextChanged);
             // 
             // cambios3
             // 
-            this.cambios3.Location = new System.Drawing.Point(437, 105);
+            this.cambios3.Location = new System.Drawing.Point(465, 107);
             this.cambios3.Name = "cambios3";
             this.cambios3.ReadOnly = true;
             this.cambios3.Size = new System.Drawing.Size(100, 20);
             this.cambios3.TabIndex = 7;
+            this.cambios3.TextChanged += new System.EventHandler(this.cambios3_TextChanged);
             // 
             // freios3
             // 
-            this.freios3.Location = new System.Drawing.Point(437, 82);
+            this.freios3.Location = new System.Drawing.Point(465, 84);
             this.freios3.Name = "freios3";
             this.freios3.ReadOnly = true;
             this.freios3.Size = new System.Drawing.Size(100, 20);
             this.freios3.TabIndex = 6;
+            this.freios3.TextChanged += new System.EventHandler(this.freios3_TextChanged);
             // 
             // motor3
             // 
-            this.motor3.Location = new System.Drawing.Point(437, 59);
+            this.motor3.Location = new System.Drawing.Point(465, 61);
             this.motor3.Name = "motor3";
             this.motor3.ReadOnly = true;
             this.motor3.Size = new System.Drawing.Size(100, 20);
             this.motor3.TabIndex = 5;
+            this.motor3.TextChanged += new System.EventHandler(this.motor3_TextChanged);
             // 
             // asaT3
             // 
-            this.asaT3.Location = new System.Drawing.Point(437, 36);
+            this.asaT3.Location = new System.Drawing.Point(465, 38);
             this.asaT3.Name = "asaT3";
             this.asaT3.ReadOnly = true;
             this.asaT3.Size = new System.Drawing.Size(100, 20);
             this.asaT3.TabIndex = 4;
+            this.asaT3.TextChanged += new System.EventHandler(this.asaT3_TextChanged);
             // 
             // asaD3
             // 
-            this.asaD3.Location = new System.Drawing.Point(437, 13);
+            this.asaD3.Location = new System.Drawing.Point(465, 15);
             this.asaD3.Name = "asaD3";
             this.asaD3.ReadOnly = true;
             this.asaD3.Size = new System.Drawing.Size(100, 20);
             this.asaD3.TabIndex = 3;
+            this.asaD3.TextChanged += new System.EventHandler(this.asaD3_TextChanged);
             // 
             // bCalcTempHum
             // 
@@ -448,7 +454,7 @@
             this.gBoxCarro.Controls.Add(this.lAsaD);
             this.gBoxCarro.Location = new System.Drawing.Point(7, 7);
             this.gBoxCarro.Name = "gBoxCarro";
-            this.gBoxCarro.Size = new System.Drawing.Size(244, 195);
+            this.gBoxCarro.Size = new System.Drawing.Size(232, 185);
             this.gBoxCarro.TabIndex = 0;
             this.gBoxCarro.TabStop = false;
             this.gBoxCarro.Text = "Ajuste do Carro";
@@ -456,7 +462,7 @@
             // suspensao
             // 
             this.suspensao.AllowDrop = true;
-            this.suspensao.Location = new System.Drawing.Point(132, 146);
+            this.suspensao.Location = new System.Drawing.Point(113, 146);
             this.suspensao.MaxLength = 3;
             this.suspensao.Name = "suspensao";
             this.suspensao.Size = new System.Drawing.Size(100, 20);
@@ -466,7 +472,7 @@
             // cambios
             // 
             this.cambios.AllowDrop = true;
-            this.cambios.Location = new System.Drawing.Point(132, 120);
+            this.cambios.Location = new System.Drawing.Point(113, 120);
             this.cambios.MaxLength = 3;
             this.cambios.Name = "cambios";
             this.cambios.Size = new System.Drawing.Size(100, 20);
@@ -476,7 +482,7 @@
             // freios
             // 
             this.freios.AllowDrop = true;
-            this.freios.Location = new System.Drawing.Point(132, 94);
+            this.freios.Location = new System.Drawing.Point(113, 94);
             this.freios.MaxLength = 3;
             this.freios.Name = "freios";
             this.freios.Size = new System.Drawing.Size(100, 20);
@@ -486,7 +492,7 @@
             // motor
             // 
             this.motor.AllowDrop = true;
-            this.motor.Location = new System.Drawing.Point(132, 68);
+            this.motor.Location = new System.Drawing.Point(113, 68);
             this.motor.MaxLength = 3;
             this.motor.Name = "motor";
             this.motor.Size = new System.Drawing.Size(100, 20);
@@ -496,7 +502,7 @@
             // asaT
             // 
             this.asaT.AllowDrop = true;
-            this.asaT.Location = new System.Drawing.Point(132, 42);
+            this.asaT.Location = new System.Drawing.Point(113, 42);
             this.asaT.MaxLength = 3;
             this.asaT.Name = "asaT";
             this.asaT.Size = new System.Drawing.Size(100, 20);
@@ -506,7 +512,7 @@
             // asaD
             // 
             this.asaD.AllowDrop = true;
-            this.asaD.Location = new System.Drawing.Point(132, 16);
+            this.asaD.Location = new System.Drawing.Point(113, 16);
             this.asaD.MaxLength = 3;
             this.asaD.Name = "asaD";
             this.asaD.Size = new System.Drawing.Size(100, 20);
@@ -1161,7 +1167,8 @@
             // linkGpro
             // 
             this.linkGpro.AutoSize = true;
-            this.linkGpro.Location = new System.Drawing.Point(585, 11);
+            this.linkGpro.Dock = System.Windows.Forms.DockStyle.Right;
+            this.linkGpro.Location = new System.Drawing.Point(601, 24);
             this.linkGpro.Name = "linkGpro";
             this.linkGpro.Size = new System.Drawing.Size(30, 13);
             this.linkGpro.TabIndex = 8;

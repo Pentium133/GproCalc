@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Resources;
 
 [assembly: AssemblyTitle("GPROCalc")]
-[assembly: AssemblyDescription("Developed in Visual Studio 2010 Ultimate; C# Agradecimento especial: Rodrigo Antunes")]
+[assembly: AssemblyDescription("Developed in Visual Studio 2010 Agradecimento especial: Rodrigo Antunes")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("RicardoRibeiro")]
 [assembly: AssemblyProduct("GPRO Calc")]
