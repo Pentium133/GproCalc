@@ -376,7 +376,7 @@
             // 
             // suspensao3
             // 
-            this.suspensao3.Location = new System.Drawing.Point(465, 130);
+            this.suspensao3.Location = new System.Drawing.Point(474, 134);
             this.suspensao3.Name = "suspensao3";
             this.suspensao3.ReadOnly = true;
             this.suspensao3.Size = new System.Drawing.Size(100, 20);
@@ -385,7 +385,7 @@
             // 
             // cambios3
             // 
-            this.cambios3.Location = new System.Drawing.Point(465, 107);
+            this.cambios3.Location = new System.Drawing.Point(474, 111);
             this.cambios3.Name = "cambios3";
             this.cambios3.ReadOnly = true;
             this.cambios3.Size = new System.Drawing.Size(100, 20);
@@ -394,7 +394,7 @@
             // 
             // freios3
             // 
-            this.freios3.Location = new System.Drawing.Point(465, 84);
+            this.freios3.Location = new System.Drawing.Point(474, 88);
             this.freios3.Name = "freios3";
             this.freios3.ReadOnly = true;
             this.freios3.Size = new System.Drawing.Size(100, 20);
@@ -403,7 +403,7 @@
             // 
             // motor3
             // 
-            this.motor3.Location = new System.Drawing.Point(465, 61);
+            this.motor3.Location = new System.Drawing.Point(474, 65);
             this.motor3.Name = "motor3";
             this.motor3.ReadOnly = true;
             this.motor3.Size = new System.Drawing.Size(100, 20);
@@ -412,7 +412,7 @@
             // 
             // asaT3
             // 
-            this.asaT3.Location = new System.Drawing.Point(465, 38);
+            this.asaT3.Location = new System.Drawing.Point(474, 42);
             this.asaT3.Name = "asaT3";
             this.asaT3.ReadOnly = true;
             this.asaT3.Size = new System.Drawing.Size(100, 20);
@@ -421,7 +421,7 @@
             // 
             // asaD3
             // 
-            this.asaD3.Location = new System.Drawing.Point(465, 15);
+            this.asaD3.Location = new System.Drawing.Point(474, 19);
             this.asaD3.Name = "asaD3";
             this.asaD3.ReadOnly = true;
             this.asaD3.Size = new System.Drawing.Size(100, 20);
