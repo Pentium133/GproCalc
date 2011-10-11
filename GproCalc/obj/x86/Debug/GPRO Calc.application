@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xrml="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <assemblyIdentity name="GPRO Calc.application" version="1.2.1.11" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <assemblyIdentity name="GPRO Calc.application" version="1.2.1.12" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <description asmv2:publisher="Ribeiro" co.v1:suiteName="Ribeiro" asmv2:product="GPRO Calc" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" co.v1:createDesktopShortcut="true">
     <deploymentProvider codebase="http://ricardo/GPRO%20Calc/GPRO%20Calc.application" />
@@ -11,13 +11,13 @@
   </compatibleFrameworks>
   <dependency>
     <dependentAssembly dependencyType="install" codebase="GPRO Calc.exe.manifest" size="5040">
-      <assemblyIdentity name="GPRO Calc.exe" version="1.2.1.11" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+      <assemblyIdentity name="GPRO Calc.exe" version="1.2.1.12" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>xoASXv6omCEkXMGmqzDX7P+bA3c=</dsig:DigestValue>
+        <dsig:DigestValue>D9Ys3TTkooGT76Z8s5yj1PbD19g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
