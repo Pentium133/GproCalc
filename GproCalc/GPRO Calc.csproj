@@ -81,7 +81,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\icon %283%29.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\gprocalc.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <PropertyGroup>
@@ -170,6 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\gpro.ico" />
+    <Content Include="Resources\gprocalc.ico" />
     <Content Include="Resources\icon %283%29.ico" />
   </ItemGroup>
   <ItemGroup />

@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_374EFDC7ECA645C694B23DA92F96FB38"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_A4ECC9E319504C0F914DCB3D18BB5BF8"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -49,6 +55,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -65,6 +79,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -94,6 +116,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_374EFDC7ECA645C694B23DA92F96FB38"
+            {
+            "SourcePath" = "8:..\\GproCalc\\Resources\\gprocalc.ico"
+            "TargetName" = "8:gprocalc.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_11E915C3AE3D48A4A36A1AE732FBAD84"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C895051C5FE44E9A91BBDC93DA5A7455"
             {
             "SourcePath" = "8:..\\GproCalc\\Resources\\icon (3).ico"
@@ -181,15 +223,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:GproCalc"
-        "ProductCode" = "8:{F286AC6C-D298-40B6-B87A-50D656D9722F}"
-        "PackageCode" = "8:{C99E9D9D-2E6C-4367-8E79-596321D89EDF}"
+        "ProductCode" = "8:{3B43A611-516E-486C-8D90-8EEDC420AC45}"
+        "PackageCode" = "8:{FAE61942-0DB2-4514-BFD5-AA6D860EF414}"
         "UpgradeCode" = "8:{B3EC89FA-A753-47BD-A8E1-16A42D454661}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.1.0"
         "Manufacturer" = "8:Ricardo Ribeiro"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://twitter.com/Ricardo01991"
@@ -199,7 +241,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Car and Driver calculators for Gpro.net"
         "ARPURLINFOABOUT" = "8:http://twitter.com/Ricardo01991"
-        "ARPPRODUCTICON" = "8:_C895051C5FE44E9A91BBDC93DA5A7455"
+        "ARPPRODUCTICON" = "8:_374EFDC7ECA645C694B23DA92F96FB38"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -313,7 +355,7 @@
             "Target" = "8:_A4ECC9E319504C0F914DCB3D18BB5BF8"
             "Folder" = "8:_2A3E8277B2724A31A83F1475EC1D0C14"
             "WorkingFolder" = "8:_11E915C3AE3D48A4A36A1AE732FBAD84"
-            "Icon" = "8:_C895051C5FE44E9A91BBDC93DA5A7455"
+            "Icon" = "8:_374EFDC7ECA645C694B23DA92F96FB38"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D5547E8262CF4EE1B122FB13D81E8788"
@@ -327,7 +369,7 @@
             "Target" = "8:_A4ECC9E319504C0F914DCB3D18BB5BF8"
             "Folder" = "8:_0E251CA98701410C83F266793912E92F"
             "WorkingFolder" = "8:_11E915C3AE3D48A4A36A1AE732FBAD84"
-            "Icon" = "8:_C895051C5FE44E9A91BBDC93DA5A7455"
+            "Icon" = "8:_374EFDC7ECA645C694B23DA92F96FB38"
             "Feature" = "8:"
             }
         }
