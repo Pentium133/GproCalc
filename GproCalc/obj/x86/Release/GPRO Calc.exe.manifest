@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
-  <asmv1:assemblyIdentity version="1.2.0.1" name="GPRO Calc.exe" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity version="1.2.1.12" name="GPRO Calc.exe" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <description asmv2:iconFile="Resources\icon (3).ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="GPRO Calc" version="1.2.4297.32210" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="GPRO Calc" version="1.2.4301.32480" language="neutral" processorArchitecture="x86" />
     <commandLine file="GPRO Calc.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,24 +43,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GPRO Calc.exe" size="161280">
-      <assemblyIdentity name="GPRO Calc" version="1.2.4297.32210" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GPRO Calc.exe" size="153088">
+      <assemblyIdentity name="GPRO Calc" version="1.2.4301.32480" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>3lq/z4JdTmGX4ETFyLqqavuR/7Y=</dsig:DigestValue>
+        <dsig:DigestValue>347Z3pdOPlNPoKm+Ae9TAzBGCLM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="GPRO Calc.exe.config" size="806">
+  <file name="GPRO Calc.exe.config" size="931">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>bMakoPo5Syb8lHTsTT+JvKzywkY=</dsig:DigestValue>
+      <dsig:DigestValue>Pd0YnWULF4VXKEiUTHGoFJJkg70=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\gpro.ico" size="4286">
@@ -70,24 +70,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>m9Tj4nz2FMpQPJbGCNhrYDNJ+ko=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\gpro2.ico" size="16958">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>oOgMcC7qYpXdl7hBOyIcbwIOAwc=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Resources\gpro3.ico" size="16958">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>s5ET+Hd+NqW31CMzPv27GNrml34=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\icon (3).ico" size="16958">

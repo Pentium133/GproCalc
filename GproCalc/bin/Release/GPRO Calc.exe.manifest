@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
-  <asmv1:assemblyIdentity version="1.2.1.11" name="GPRO Calc.exe" publicKeyToken="93a0226d01cf064a" language="neutral" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity version="1.2.1.12" name="GPRO Calc.exe" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <description asmv2:iconFile="Resources\icon (3).ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="GPRO Calc" version="1.2.4301.27521" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="GPRO Calc" version="1.2.4301.32480" language="neutral" processorArchitecture="x86" />
     <commandLine file="GPRO Calc.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GPRO Calc.exe" size="154624">
-      <assemblyIdentity name="GPRO Calc" version="1.2.4301.27521" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GPRO Calc.exe" size="153088">
+      <assemblyIdentity name="GPRO Calc" version="1.2.4301.32480" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>uIb5zdK2FCIAWo++3f6+d+FMpzg=</dsig:DigestValue>
+        <dsig:DigestValue>347Z3pdOPlNPoKm+Ae9TAzBGCLM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -88,4 +88,4 @@
       <!--<supportedOS Id="{35138b9a-5d96-4fbd-8e2d-a2440225f93a}"/>-->
     </application>
   </compatibility>
-<publisherIdentity name="CN=RICARDO\Ricardo" issuerKeyHash="bc21572e217ed8f166882914b4de10885319ed85" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>3jggaZthqnOvjv/HqSSmUGvkeXc=</DigestValue></Reference></SignedInfo><SignatureValue>jHGteabpZ/c1HptsSaJRJ32AqsTjoDw1NPZDyf+hSnK9kr5p4tOWCkapazIlQO0bFITXP94GzmsO7SqLE1QA4F7nLvnlyzvXO9Wc2TTyhXBWe15B3Der4U7vjXK/+GSUnolkxDHHkmRapC/sFdHb9r4bqyI6kf9sILBgGu2YaUI=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>ljWzW1vOc0nsf0cZ3FnEC1GPdTicmZWwLSlfcXeRkx44f844P1dMi78f44vMkTGIRpnsjHYgyEg6woesvmwqCFaco1sAde4kSKAH+5+vAwoXav/lWJSFLsROL2U9QSDnZD5V0tbapFl70UDIAcYi+c4gS+MgxFnDljCpcAjVc10=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="7779e46b50a624a9c7ff8eaf73aa619b692038de" Description="" Url=""><as:assemblyIdentity version="1.2.1.11" name="GPRO Calc.exe" publicKeyToken="93a0226d01cf064a" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=RICARDO\Ricardo</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>JbXkcslF6d4/GzDoTGfQat/p7Ak=</DigestValue></Reference></SignedInfo><SignatureValue>Fo5UzTws/Y0WuzhCWuTWRHe1AHWhJrh3tgz+uq0q1jHIQUUnI2SVfrhonKcTfkPFvyeFa4tvsf/su74HnGa8PE+rqVUIxGlC8OGh+3sSMtB5hPGe9Y3uB6Yqv2j+fZ5Ac64OMGVvGLMQ4aWw+SEQBSugxNoM/R4yt9qV4W6i/60=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>ljWzW1vOc0nsf0cZ3FnEC1GPdTicmZWwLSlfcXeRkx44f844P1dMi78f44vMkTGIRpnsjHYgyEg6woesvmwqCFaco1sAde4kSKAH+5+vAwoXav/lWJSFLsROL2U9QSDnZD5V0tbapFl70UDIAcYi+c4gS+MgxFnDljCpcAjVc10=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB1TCCAT6gAwIBAgIQIynczhrJg7hCMsUg+oWfpTANBgkqhkiG9w0BAQUFADApMScwJQYDVQQDHh4AUgBJAEMAQQBSAEQATwBcAFIAaQBjAGEAcgBkAG8wHhcNMTEwNDI2MTMxNTAwWhcNMTIwNDI1MTkxNTAwWjApMScwJQYDVQQDHh4AUgBJAEMAQQBSAEQATwBcAFIAaQBjAGEAcgBkAG8wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAJY1s1tbznNJ7H9HGdxZxAtRj3U4nJmVsC0pX3F3kZMeOH/OOD9XTIu/H+OLzJExiEaZ7Ix2IMhIOsKHrL5sKghWnKNbAHXuJEigB/ufrwMKF2r/5ViUhS7ETi9lPUEg52Q+VdLW2qRZe9FAyAHGIvnOIEvjIMRZw5YwqXAI1XNdAgMBAAEwDQYJKoZIhvcNAQEFBQADgYEANIXNWlK9434qhuS0iDtrK+SxYzPZF0MxaJeB7XHAlVuFNjw1TQCVM8VtAujxsYeVLB1AFlVHYgV3kmMSa+RF6QDHCV6VR+XkTBvsClKT4ZE6zB9FDNY7ZuxsQifjzs5QVUT8G/O4nQmapC7eJ20Ehl5yg0LCQTl3ixhrrnH0340=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
+</asmv1:assembly>
