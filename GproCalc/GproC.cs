@@ -535,12 +535,18 @@ namespace carWindow
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            sempreTopo();    
+            sempreTopo(); 
         }
 
         private void sempreNoTopoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            sempreTopo(); 
+            if (cBoxTopo.Checked == true)
+                cBoxTopo.Checked = false;
+            else 
+                if (cBoxTopo.Checked == false)
+                    cBoxTopo.Checked = true;
+
+            sempreTopo();
         }
 
         private void tOpacidade_Scroll(object sender, EventArgs e)
