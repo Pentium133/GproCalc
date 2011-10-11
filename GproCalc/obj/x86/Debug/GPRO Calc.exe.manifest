@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Resources\gprocalc.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="GPRO Calc" version="1.2.4301.37327" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="GPRO Calc" version="1.2.4301.38761" language="neutral" processorArchitecture="x86" />
     <commandLine file="GPRO Calc.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GPRO Calc.exe" size="245248">
-      <assemblyIdentity name="GPRO Calc" version="1.2.4301.37327" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GPRO Calc.exe" size="389632">
+      <assemblyIdentity name="GPRO Calc" version="1.2.4301.38761" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>9LCOeOftweY1aIi4Fp2eEWc/M/k=</dsig:DigestValue>
+        <dsig:DigestValue>eH6l2vZm+ZdNtO8Udl5g9mt0aKg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -72,13 +72,13 @@
       <dsig:DigestValue>m9Tj4nz2FMpQPJbGCNhrYDNJ+ko=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Resources\gprocalc.ico" size="61798">
+  <file name="Resources\gprocalc.ico" size="134106">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>qjtKy+G1/DQas7Xl9ZZ7NTbxk6Q=</dsig:DigestValue>
+      <dsig:DigestValue>V04IXPuFpOrB3NO6Xe14d8b9GA8=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\icon (3).ico" size="16958">
