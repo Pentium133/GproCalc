@@ -29,21 +29,6 @@ namespace carWindow
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                double calc = (Convert.ToDouble(conc.Text) * 1 / 6) + (Convert.ToDouble(tal.Text) * 1 / 4) + (Convert.ToDouble(agr.Text) * 1 / 7) +
-                    (Convert.ToDouble(exp.Text) * 1 / 12) + (Convert.ToDouble(ti.Text) * 1 / 8) + (Convert.ToDouble(stam.Text) * 1 / 7) +
-                    (Convert.ToDouble(cari.Text) * 1 / 12) - (Convert.ToDouble(peso.Text) * 1 / 12);
-                calc = Math.Ceiling(calc);
-                calc += (Convert.ToDouble(motv.Text) * 1 / 12);
-                calc = Math.Ceiling(calc);
-                tBoxTotal.Text = calc.ToString();
-            }
-            catch { }
-        }
-
         private void sec_molh_Click(object sender, EventArgs e)
         {
             try
@@ -137,7 +122,6 @@ namespace carWindow
             {
                 if (tabControl1.SelectedIndex == 1)
                 {
-                    button1_Click(sender, e);
                     calc_window_Click(sender, e);
                 }
             }
@@ -235,16 +219,15 @@ namespace carWindow
             bSec_molh.Text = "Dry --> Wet";
             bMolh_sec.Text = "Wet --> Dry";
             bCalcTempHum.Text = "Calculate";
-            bCalculaTotal.Text = "Calculate";
+
             bCalcAjuste.Text = "Calculate";
-            bMetePrincipal.Text = "Copy to Main Ajustment";
+            bMetePrincipal.Text = "Copy to Main Setup";
 
             //groupbox
             gBoxQ1Q2.Text = "Convert from Q1 to Q2";
             gBoxRain.Text = "Rain";
             gBoxQ1.Text = "Qualification 1";
             gBoxQ2.Text = "Qualification 2";
-            gBoxTotal.Text = "Overall";
             gBoxCarro.Text = "Car Setup";
             Lang.Text = "Language";
             gBoxPiloto.Text = "Pilot";
@@ -311,7 +294,6 @@ namespace carWindow
             lOpacidade.Text = "Opacidade";
 
             //botoes
-            bCalculaTotal.Text = "Calcular";
             bSec_molh.Text = "Seco --> Molhado";
             bCalcTempHum.Text = "Calcular";
             bMolh_sec.Text = "Molhado --> Seco";
@@ -325,7 +307,6 @@ namespace carWindow
             gBoxQ1.Text = "Qualificação 1";
             gBoxQ2.Text = "Qualificação 2";
             gBoxPiloto.Text = "Piloto";
-            gBoxTotal.Text = "Total";
             gBoxAjust.Text = "Janela de Ajuste";
             Lang.Text = "Língua";
             gBoxOtherOptions.Text = "Outros";
@@ -440,7 +421,6 @@ namespace carWindow
                 file.Close();
 
                 calc_window_Click(sender, e);
-                button1_Click(sender, e);
                 button3_Click(sender, e);
             }
         }
@@ -495,6 +475,18 @@ namespace carWindow
 
         private void calc_window_Click(object sender, EventArgs e)
         {
+            try
+            {
+                double calc = (Convert.ToDouble(conc.Text) * 1 / 6) + (Convert.ToDouble(tal.Text) * 1 / 4) + (Convert.ToDouble(agr.Text) * 1 / 7) +
+                    (Convert.ToDouble(exp.Text) * 1 / 12) + (Convert.ToDouble(ti.Text) * 1 / 8) + (Convert.ToDouble(stam.Text) * 1 / 7) +
+                    (Convert.ToDouble(cari.Text) * 1 / 12) - (Convert.ToDouble(peso.Text) * 1 / 12);
+                calc = Math.Round(calc);
+                calc += (Convert.ToDouble(motv.Text) * 1 / 12);
+                calc = Math.Round(calc);
+                tBoxTotal.Text = calc.ToString();
+            }
+            catch { }
+
             try
             {
                 double exp = Convert.ToDouble(ti.Text);
@@ -595,12 +587,59 @@ namespace carWindow
 
         private void bMetePrincipal_Click(object sender, EventArgs e)
         {
+            button3_Click(sender, e);
+            
             asaD.Text = asaD3.Text;
             asaT.Text = asaT3.Text;
             motor.Text = motor3.Text;
             freios.Text = freios3.Text;
             cambios.Text = cambios3.Text;
             suspensao.Text = suspensao3.Text;
+        }
+
+        private void conc_Enter(object sender, EventArgs e)
+        {
+            conc.SelectAll();
+        }
+
+        private void tal_Enter(object sender, EventArgs e)
+        {
+            tal.SelectAll();
+        }
+
+        private void agr_Enter(object sender, EventArgs e)
+        {
+            agr.SelectAll();
+        }
+
+        private void exp_Enter(object sender, EventArgs e)
+        {
+            exp.SelectAll();
+        }
+
+        private void ti_Enter(object sender, EventArgs e)
+        {
+            ti.SelectAll();
+        }
+
+        private void stam_Enter(object sender, EventArgs e)
+        {
+            stam.SelectAll();
+        }
+
+        private void cari_Enter(object sender, EventArgs e)
+        {
+            cari.SelectAll();
+        }
+
+        private void motv_Enter(object sender, EventArgs e)
+        {
+            motv.SelectAll();
+        }
+
+        private void peso_Enter(object sender, EventArgs e)
+        {
+            peso.SelectAll();
         }
 
     }

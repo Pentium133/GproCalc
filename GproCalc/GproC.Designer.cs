@@ -34,6 +34,7 @@
             this.asaT2 = new System.Windows.Forms.TextBox();
             this.asaD2 = new System.Windows.Forms.TextBox();
             this.gBoxQ1Q2 = new System.Windows.Forms.GroupBox();
+            this.bMetePrincipal = new System.Windows.Forms.Button();
             this.gBoxQ2 = new System.Windows.Forms.GroupBox();
             this.lTemp2 = new System.Windows.Forms.Label();
             this.lHum2 = new System.Windows.Forms.Label();
@@ -67,15 +68,13 @@
             this.piloto = new System.Windows.Forms.TabPage();
             this.gBoxAjust = new System.Windows.Forms.GroupBox();
             this.lValor = new System.Windows.Forms.Label();
+            this.tBoxTotal = new System.Windows.Forms.TextBox();
             this.bCalcAjuste = new System.Windows.Forms.Button();
+            this.lTotal = new System.Windows.Forms.Label();
             this.txtAjuste = new System.Windows.Forms.RichTextBox();
             this.tBoxValor = new System.Windows.Forms.TextBox();
             this.tBoxFelicidade = new System.Windows.Forms.TextBox();
             this.lFelicidade = new System.Windows.Forms.Label();
-            this.gBoxTotal = new System.Windows.Forms.GroupBox();
-            this.bCalculaTotal = new System.Windows.Forms.Button();
-            this.tBoxTotal = new System.Windows.Forms.TextBox();
-            this.lTotal = new System.Windows.Forms.Label();
             this.gBoxPiloto = new System.Windows.Forms.GroupBox();
             this.motv = new System.Windows.Forms.TextBox();
             this.lMotiv = new System.Windows.Forms.Label();
@@ -122,7 +121,6 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.linkGpro = new System.Windows.Forms.LinkLabel();
-            this.bMetePrincipal = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.conversor.SuspendLayout();
             this.gBoxRain.SuspendLayout();
@@ -132,7 +130,6 @@
             this.gBoxCarro.SuspendLayout();
             this.piloto.SuspendLayout();
             this.gBoxAjust.SuspendLayout();
-            this.gBoxTotal.SuspendLayout();
             this.gBoxPiloto.SuspendLayout();
             this.Opcoes.SuspendLayout();
             this.gBoxOtherOptions.SuspendLayout();
@@ -273,6 +270,16 @@
             this.gBoxQ1Q2.TabIndex = 2;
             this.gBoxQ1Q2.TabStop = false;
             this.gBoxQ1Q2.Text = "Conversor de Q1 para Q2";
+            // 
+            // bMetePrincipal
+            // 
+            this.bMetePrincipal.Location = new System.Drawing.Point(171, 111);
+            this.bMetePrincipal.Name = "bMetePrincipal";
+            this.bMetePrincipal.Size = new System.Drawing.Size(146, 33);
+            this.bMetePrincipal.TabIndex = 9;
+            this.bMetePrincipal.Text = "Copiar para Ajuste Principal";
+            this.bMetePrincipal.UseVisualStyleBackColor = true;
+            this.bMetePrincipal.Click += new System.EventHandler(this.bMetePrincipal_Click);
             // 
             // gBoxQ2
             // 
@@ -578,7 +585,6 @@
             // piloto
             // 
             this.piloto.Controls.Add(this.gBoxAjust);
-            this.piloto.Controls.Add(this.gBoxTotal);
             this.piloto.Controls.Add(this.gBoxPiloto);
             this.piloto.Location = new System.Drawing.Point(4, 22);
             this.piloto.Name = "piloto";
@@ -591,14 +597,16 @@
             // gBoxAjust
             // 
             this.gBoxAjust.Controls.Add(this.lValor);
+            this.gBoxAjust.Controls.Add(this.tBoxTotal);
             this.gBoxAjust.Controls.Add(this.bCalcAjuste);
+            this.gBoxAjust.Controls.Add(this.lTotal);
             this.gBoxAjust.Controls.Add(this.txtAjuste);
             this.gBoxAjust.Controls.Add(this.tBoxValor);
             this.gBoxAjust.Controls.Add(this.tBoxFelicidade);
             this.gBoxAjust.Controls.Add(this.lFelicidade);
-            this.gBoxAjust.Location = new System.Drawing.Point(257, 82);
+            this.gBoxAjust.Location = new System.Drawing.Point(257, 7);
             this.gBoxAjust.Name = "gBoxAjust";
-            this.gBoxAjust.Size = new System.Drawing.Size(336, 282);
+            this.gBoxAjust.Size = new System.Drawing.Size(336, 357);
             this.gBoxAjust.TabIndex = 0;
             this.gBoxAjust.TabStop = false;
             this.gBoxAjust.Text = "Janela de Ajuste";
@@ -606,17 +614,26 @@
             // lValor
             // 
             this.lValor.AutoSize = true;
-            this.lValor.Location = new System.Drawing.Point(9, 75);
+            this.lValor.Location = new System.Drawing.Point(9, 132);
             this.lValor.Name = "lValor";
             this.lValor.Size = new System.Drawing.Size(114, 13);
             this.lValor.TabIndex = 1;
             this.lValor.Text = "Valor a Subtrair/Somar";
             // 
+            // tBoxTotal
+            // 
+            this.tBoxTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tBoxTotal.Location = new System.Drawing.Point(230, 92);
+            this.tBoxTotal.Name = "tBoxTotal";
+            this.tBoxTotal.ReadOnly = true;
+            this.tBoxTotal.Size = new System.Drawing.Size(100, 20);
+            this.tBoxTotal.TabIndex = 2;
+            // 
             // bCalcAjuste
             // 
             this.bCalcAjuste.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.bCalcAjuste.Location = new System.Drawing.Point(6, 25);
+            this.bCalcAjuste.Location = new System.Drawing.Point(90, 36);
             this.bCalcAjuste.Name = "bCalcAjuste";
             this.bCalcAjuste.Size = new System.Drawing.Size(166, 35);
             this.bCalcAjuste.TabIndex = 0;
@@ -624,10 +641,19 @@
             this.bCalcAjuste.UseVisualStyleBackColor = true;
             this.bCalcAjuste.Click += new System.EventHandler(this.calc_window_Click);
             // 
+            // lTotal
+            // 
+            this.lTotal.AutoSize = true;
+            this.lTotal.Location = new System.Drawing.Point(9, 99);
+            this.lTotal.Name = "lTotal";
+            this.lTotal.Size = new System.Drawing.Size(31, 13);
+            this.lTotal.TabIndex = 1;
+            this.lTotal.Text = "Total";
+            // 
             // txtAjuste
             // 
             this.txtAjuste.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAjuste.Location = new System.Drawing.Point(6, 142);
+            this.txtAjuste.Location = new System.Drawing.Point(6, 217);
             this.txtAjuste.Name = "txtAjuste";
             this.txtAjuste.ReadOnly = true;
             this.txtAjuste.Size = new System.Drawing.Size(324, 134);
@@ -636,7 +662,7 @@
             // 
             // tBoxValor
             // 
-            this.tBoxValor.Location = new System.Drawing.Point(230, 71);
+            this.tBoxValor.Location = new System.Drawing.Point(230, 128);
             this.tBoxValor.Name = "tBoxValor";
             this.tBoxValor.ReadOnly = true;
             this.tBoxValor.Size = new System.Drawing.Size(100, 20);
@@ -644,7 +670,7 @@
             // 
             // tBoxFelicidade
             // 
-            this.tBoxFelicidade.Location = new System.Drawing.Point(230, 106);
+            this.tBoxFelicidade.Location = new System.Drawing.Point(230, 163);
             this.tBoxFelicidade.Name = "tBoxFelicidade";
             this.tBoxFelicidade.ReadOnly = true;
             this.tBoxFelicidade.Size = new System.Drawing.Size(100, 20);
@@ -653,53 +679,11 @@
             // lFelicidade
             // 
             this.lFelicidade.AutoSize = true;
-            this.lFelicidade.Location = new System.Drawing.Point(9, 110);
+            this.lFelicidade.Location = new System.Drawing.Point(9, 167);
             this.lFelicidade.Name = "lFelicidade";
             this.lFelicidade.Size = new System.Drawing.Size(95, 13);
             this.lFelicidade.TabIndex = 3;
             this.lFelicidade.Text = "Zona de felicidade";
-            // 
-            // gBoxTotal
-            // 
-            this.gBoxTotal.Controls.Add(this.bCalculaTotal);
-            this.gBoxTotal.Controls.Add(this.tBoxTotal);
-            this.gBoxTotal.Controls.Add(this.lTotal);
-            this.gBoxTotal.Location = new System.Drawing.Point(257, 7);
-            this.gBoxTotal.Name = "gBoxTotal";
-            this.gBoxTotal.Size = new System.Drawing.Size(336, 69);
-            this.gBoxTotal.TabIndex = 2;
-            this.gBoxTotal.TabStop = false;
-            this.gBoxTotal.Text = "Total";
-            // 
-            // bCalculaTotal
-            // 
-            this.bCalculaTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.bCalculaTotal.Location = new System.Drawing.Point(6, 19);
-            this.bCalculaTotal.Name = "bCalculaTotal";
-            this.bCalculaTotal.Size = new System.Drawing.Size(166, 35);
-            this.bCalculaTotal.TabIndex = 0;
-            this.bCalculaTotal.Text = "Calcular";
-            this.bCalculaTotal.UseVisualStyleBackColor = true;
-            this.bCalculaTotal.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // tBoxTotal
-            // 
-            this.tBoxTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBoxTotal.Location = new System.Drawing.Point(230, 26);
-            this.tBoxTotal.Name = "tBoxTotal";
-            this.tBoxTotal.ReadOnly = true;
-            this.tBoxTotal.Size = new System.Drawing.Size(100, 20);
-            this.tBoxTotal.TabIndex = 2;
-            // 
-            // lTotal
-            // 
-            this.lTotal.AutoSize = true;
-            this.lTotal.Location = new System.Drawing.Point(187, 30);
-            this.lTotal.Name = "lTotal";
-            this.lTotal.Size = new System.Drawing.Size(31, 13);
-            this.lTotal.TabIndex = 1;
-            this.lTotal.Text = "Total";
             // 
             // gBoxPiloto
             // 
@@ -737,6 +721,7 @@
             this.motv.Size = new System.Drawing.Size(100, 20);
             this.motv.TabIndex = 15;
             this.motv.Text = "0";
+            this.motv.Enter += new System.EventHandler(this.motv_Enter);
             this.motv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.motv_KeyPress);
             // 
             // lMotiv
@@ -757,6 +742,7 @@
             this.stam.Size = new System.Drawing.Size(100, 20);
             this.stam.TabIndex = 11;
             this.stam.Text = "0";
+            this.stam.Enter += new System.EventHandler(this.stam_Enter);
             this.stam.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.stam_KeyPress);
             // 
             // peso
@@ -768,6 +754,7 @@
             this.peso.Size = new System.Drawing.Size(100, 20);
             this.peso.TabIndex = 17;
             this.peso.Text = "0";
+            this.peso.Enter += new System.EventHandler(this.peso_Enter);
             this.peso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.peso_KeyPress);
             // 
             // ti
@@ -779,6 +766,7 @@
             this.ti.Size = new System.Drawing.Size(100, 20);
             this.ti.TabIndex = 9;
             this.ti.Text = "0";
+            this.ti.Enter += new System.EventHandler(this.ti_Enter);
             this.ti.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ti_KeyPress);
             // 
             // cari
@@ -790,6 +778,7 @@
             this.cari.Size = new System.Drawing.Size(100, 20);
             this.cari.TabIndex = 13;
             this.cari.Text = "0";
+            this.cari.Enter += new System.EventHandler(this.cari_Enter);
             this.cari.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cari_KeyPress);
             // 
             // lPeso
@@ -810,6 +799,7 @@
             this.exp.Size = new System.Drawing.Size(100, 20);
             this.exp.TabIndex = 7;
             this.exp.Text = "0";
+            this.exp.Enter += new System.EventHandler(this.exp_Enter);
             this.exp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.exp_KeyPress);
             // 
             // agr
@@ -821,6 +811,7 @@
             this.agr.Size = new System.Drawing.Size(100, 20);
             this.agr.TabIndex = 5;
             this.agr.Text = "0";
+            this.agr.Enter += new System.EventHandler(this.agr_Enter);
             this.agr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.agr_KeyPress);
             // 
             // tal
@@ -832,6 +823,7 @@
             this.tal.Size = new System.Drawing.Size(100, 20);
             this.tal.TabIndex = 3;
             this.tal.Text = "0";
+            this.tal.Enter += new System.EventHandler(this.tal_Enter);
             this.tal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tal_KeyPress);
             // 
             // conc
@@ -843,6 +835,7 @@
             this.conc.Size = new System.Drawing.Size(100, 20);
             this.conc.TabIndex = 1;
             this.conc.Text = "0";
+            this.conc.Enter += new System.EventHandler(this.conc_Enter);
             this.conc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.conc_KeyPress);
             // 
             // lCarisma
@@ -1178,16 +1171,6 @@
             this.linkGpro.Text = "Gpro";
             this.linkGpro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // bMetePrincipal
-            // 
-            this.bMetePrincipal.Location = new System.Drawing.Point(171, 111);
-            this.bMetePrincipal.Name = "bMetePrincipal";
-            this.bMetePrincipal.Size = new System.Drawing.Size(146, 33);
-            this.bMetePrincipal.TabIndex = 9;
-            this.bMetePrincipal.Text = "Copiar para Ajuste Principal";
-            this.bMetePrincipal.UseVisualStyleBackColor = true;
-            this.bMetePrincipal.Click += new System.EventHandler(this.bMetePrincipal_Click);
-            // 
             // GproCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1217,8 +1200,6 @@
             this.piloto.ResumeLayout(false);
             this.gBoxAjust.ResumeLayout(false);
             this.gBoxAjust.PerformLayout();
-            this.gBoxTotal.ResumeLayout(false);
-            this.gBoxTotal.PerformLayout();
             this.gBoxPiloto.ResumeLayout(false);
             this.gBoxPiloto.PerformLayout();
             this.Opcoes.ResumeLayout(false);
@@ -1248,7 +1229,6 @@
         private System.Windows.Forms.Label lTalento;
         private System.Windows.Forms.Label lConcentra;
         private System.Windows.Forms.Label lTotal;
-        private System.Windows.Forms.Button bCalculaTotal;
         private System.Windows.Forms.TextBox stam;
         private System.Windows.Forms.TextBox peso;
         private System.Windows.Forms.TextBox ti;
@@ -1330,7 +1310,6 @@
         private System.Windows.Forms.Button bCalcAjuste;
         private System.Windows.Forms.GroupBox gBoxAjust;
         private System.Windows.Forms.RichTextBox txtAjuste;
-        private System.Windows.Forms.GroupBox gBoxTotal;
         private System.Windows.Forms.LinkLabel linkGpro;
         private System.Windows.Forms.CheckBox cBoxTopo;
         private System.Windows.Forms.GroupBox gBoxOtherOptions;
