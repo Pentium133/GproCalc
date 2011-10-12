@@ -121,6 +121,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.linkGpro = new System.Windows.Forms.LinkLabel();
+            this.bCleanPilot = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.conversor.SuspendLayout();
             this.gBoxRain.SuspendLayout();
@@ -687,6 +688,7 @@
             // 
             // gBoxPiloto
             // 
+            this.gBoxPiloto.Controls.Add(this.bCleanPilot);
             this.gBoxPiloto.Controls.Add(this.motv);
             this.gBoxPiloto.Controls.Add(this.lMotiv);
             this.gBoxPiloto.Controls.Add(this.stam);
@@ -715,7 +717,7 @@
             // motv
             // 
             this.motv.AllowDrop = true;
-            this.motv.Location = new System.Drawing.Point(133, 258);
+            this.motv.Location = new System.Drawing.Point(133, 203);
             this.motv.MaxLength = 3;
             this.motv.Name = "motv";
             this.motv.Size = new System.Drawing.Size(100, 20);
@@ -727,7 +729,7 @@
             // lMotiv
             // 
             this.lMotiv.AutoSize = true;
-            this.lMotiv.Location = new System.Drawing.Point(7, 261);
+            this.lMotiv.Location = new System.Drawing.Point(7, 206);
             this.lMotiv.Name = "lMotiv";
             this.lMotiv.Size = new System.Drawing.Size(57, 13);
             this.lMotiv.TabIndex = 14;
@@ -736,7 +738,7 @@
             // stam
             // 
             this.stam.AllowDrop = true;
-            this.stam.Location = new System.Drawing.Point(133, 191);
+            this.stam.Location = new System.Drawing.Point(133, 151);
             this.stam.MaxLength = 3;
             this.stam.Name = "stam";
             this.stam.Size = new System.Drawing.Size(100, 20);
@@ -748,7 +750,7 @@
             // peso
             // 
             this.peso.AllowDrop = true;
-            this.peso.Location = new System.Drawing.Point(133, 293);
+            this.peso.Location = new System.Drawing.Point(133, 229);
             this.peso.MaxLength = 3;
             this.peso.Name = "peso";
             this.peso.Size = new System.Drawing.Size(100, 20);
@@ -760,7 +762,7 @@
             // ti
             // 
             this.ti.AllowDrop = true;
-            this.ti.Location = new System.Drawing.Point(133, 157);
+            this.ti.Location = new System.Drawing.Point(133, 125);
             this.ti.MaxLength = 3;
             this.ti.Name = "ti";
             this.ti.Size = new System.Drawing.Size(100, 20);
@@ -772,7 +774,7 @@
             // cari
             // 
             this.cari.AllowDrop = true;
-            this.cari.Location = new System.Drawing.Point(133, 224);
+            this.cari.Location = new System.Drawing.Point(133, 177);
             this.cari.MaxLength = 3;
             this.cari.Name = "cari";
             this.cari.Size = new System.Drawing.Size(100, 20);
@@ -784,7 +786,7 @@
             // lPeso
             // 
             this.lPeso.AutoSize = true;
-            this.lPeso.Location = new System.Drawing.Point(7, 296);
+            this.lPeso.Location = new System.Drawing.Point(7, 232);
             this.lPeso.Name = "lPeso";
             this.lPeso.Size = new System.Drawing.Size(31, 13);
             this.lPeso.TabIndex = 16;
@@ -793,7 +795,7 @@
             // exp
             // 
             this.exp.AllowDrop = true;
-            this.exp.Location = new System.Drawing.Point(133, 123);
+            this.exp.Location = new System.Drawing.Point(133, 99);
             this.exp.MaxLength = 3;
             this.exp.Name = "exp";
             this.exp.Size = new System.Drawing.Size(100, 20);
@@ -805,7 +807,7 @@
             // agr
             // 
             this.agr.AllowDrop = true;
-            this.agr.Location = new System.Drawing.Point(133, 89);
+            this.agr.Location = new System.Drawing.Point(133, 73);
             this.agr.MaxLength = 3;
             this.agr.Name = "agr";
             this.agr.Size = new System.Drawing.Size(100, 20);
@@ -817,7 +819,7 @@
             // tal
             // 
             this.tal.AllowDrop = true;
-            this.tal.Location = new System.Drawing.Point(133, 55);
+            this.tal.Location = new System.Drawing.Point(133, 47);
             this.tal.MaxLength = 3;
             this.tal.Name = "tal";
             this.tal.Size = new System.Drawing.Size(100, 20);
@@ -841,7 +843,7 @@
             // lCarisma
             // 
             this.lCarisma.AutoSize = true;
-            this.lCarisma.Location = new System.Drawing.Point(7, 227);
+            this.lCarisma.Location = new System.Drawing.Point(7, 180);
             this.lCarisma.Name = "lCarisma";
             this.lCarisma.Size = new System.Drawing.Size(44, 13);
             this.lCarisma.TabIndex = 12;
@@ -850,7 +852,7 @@
             // lResist
             // 
             this.lResist.AutoSize = true;
-            this.lResist.Location = new System.Drawing.Point(7, 194);
+            this.lResist.Location = new System.Drawing.Point(7, 154);
             this.lResist.Name = "lResist";
             this.lResist.Size = new System.Drawing.Size(62, 13);
             this.lResist.TabIndex = 10;
@@ -859,7 +861,7 @@
             // lCTecn
             // 
             this.lCTecn.AutoSize = true;
-            this.lCTecn.Location = new System.Drawing.Point(7, 160);
+            this.lCTecn.Location = new System.Drawing.Point(7, 128);
             this.lCTecn.Name = "lCTecn";
             this.lCTecn.Size = new System.Drawing.Size(77, 13);
             this.lCTecn.TabIndex = 8;
@@ -868,7 +870,7 @@
             // lExp
             // 
             this.lExp.AutoSize = true;
-            this.lExp.Location = new System.Drawing.Point(7, 126);
+            this.lExp.Location = new System.Drawing.Point(7, 102);
             this.lExp.Name = "lExp";
             this.lExp.Size = new System.Drawing.Size(62, 13);
             this.lExp.TabIndex = 6;
@@ -877,7 +879,7 @@
             // lAgress
             // 
             this.lAgress.AutoSize = true;
-            this.lAgress.Location = new System.Drawing.Point(7, 92);
+            this.lAgress.Location = new System.Drawing.Point(7, 76);
             this.lAgress.Name = "lAgress";
             this.lAgress.Size = new System.Drawing.Size(73, 13);
             this.lAgress.TabIndex = 4;
@@ -886,7 +888,7 @@
             // lTalento
             // 
             this.lTalento.AutoSize = true;
-            this.lTalento.Location = new System.Drawing.Point(7, 58);
+            this.lTalento.Location = new System.Drawing.Point(7, 50);
             this.lTalento.Name = "lTalento";
             this.lTalento.Size = new System.Drawing.Size(43, 13);
             this.lTalento.TabIndex = 2;
@@ -1171,6 +1173,16 @@
             this.linkGpro.Text = "Gpro";
             this.linkGpro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // bCleanPilot
+            // 
+            this.bCleanPilot.Location = new System.Drawing.Point(10, 290);
+            this.bCleanPilot.Name = "bCleanPilot";
+            this.bCleanPilot.Size = new System.Drawing.Size(223, 33);
+            this.bCleanPilot.TabIndex = 18;
+            this.bCleanPilot.Text = "Limpar";
+            this.bCleanPilot.UseVisualStyleBackColor = true;
+            this.bCleanPilot.Click += new System.EventHandler(this.bCleanPilot_Click);
+            // 
             // GproCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1318,6 +1330,7 @@
         private System.Windows.Forms.TrackBar sliderOpacidade;
         private System.Windows.Forms.Label lPercentagem;
         private System.Windows.Forms.Button bMetePrincipal;
+        private System.Windows.Forms.Button bCleanPilot;
     }
 }
 

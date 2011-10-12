@@ -219,9 +219,9 @@ namespace carWindow
             bSec_molh.Text = "Dry --> Wet";
             bMolh_sec.Text = "Wet --> Dry";
             bCalcTempHum.Text = "Calculate";
-
             bCalcAjuste.Text = "Calculate";
             bMetePrincipal.Text = "Copy to Main Setup";
+            bCleanPilot.Text = "Limpar";
 
             //groupbox
             gBoxQ1Q2.Text = "Convert from Q1 to Q2";
@@ -299,6 +299,7 @@ namespace carWindow
             bMolh_sec.Text = "Molhado --> Seco";
             bCalcAjuste.Text = "Calcular";
             bMetePrincipal.Text = "Copiar para Ajuste Principal";
+            bCleanPilot.Text = "Limpar";
 
             //groupbox
             gBoxCarro.Text = "Ajuste do Carro";
@@ -640,6 +641,24 @@ namespace carWindow
         private void peso_Enter(object sender, EventArgs e)
         {
             peso.SelectAll();
+        }
+
+        private void bCleanPilot_Click(object sender, EventArgs e)
+        {
+            conc.Text = "0";
+            tal.Text = "0";
+            agr.Text = "0";
+            exp.Text = "0";
+            ti.Text = "0";
+            stam.Text = "0";
+            cari.Text = "0";
+            motv.Text = "0";
+            peso.Text = "0";
+
+            calc_window_Click(sender,e);
+
+            tBoxValor.Text = "";
+            tBoxFelicidade.Text = "";
         }
 
     }

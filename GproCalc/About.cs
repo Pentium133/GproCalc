@@ -106,6 +106,11 @@ namespace carWindow
             Close();
         }
 
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
 
     }
