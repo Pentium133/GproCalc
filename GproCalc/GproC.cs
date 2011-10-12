@@ -237,6 +237,7 @@ namespace carWindow
             bCalcTempHum.Text = "Calculate";
             bCalculaTotal.Text = "Calculate";
             bCalcAjuste.Text = "Calculate";
+            bMetePrincipal.Text = "Copy to Main Ajustment";
 
             //groupbox
             gBoxQ1Q2.Text = "Convert from Q1 to Q2";
@@ -315,6 +316,7 @@ namespace carWindow
             bCalcTempHum.Text = "Calcular";
             bMolh_sec.Text = "Molhado --> Seco";
             bCalcAjuste.Text = "Calcular";
+            bMetePrincipal.Text = "Copiar para Ajuste Principal";
 
             //groupbox
             gBoxCarro.Text = "Ajuste do Carro";
@@ -589,6 +591,16 @@ namespace carWindow
         private void suspensao3_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void bMetePrincipal_Click(object sender, EventArgs e)
+        {
+            asaD.Text = asaD3.Text;
+            asaT.Text = asaT3.Text;
+            motor.Text = motor3.Text;
+            freios.Text = freios3.Text;
+            cambios.Text = cambios3.Text;
+            suspensao.Text = suspensao3.Text;
         }
 
     }

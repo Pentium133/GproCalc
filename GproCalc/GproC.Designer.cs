@@ -122,6 +122,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.linkGpro = new System.Windows.Forms.LinkLabel();
+            this.bMetePrincipal = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.conversor.SuspendLayout();
             this.gBoxRain.SuspendLayout();
@@ -256,6 +257,7 @@
             // 
             // gBoxQ1Q2
             // 
+            this.gBoxQ1Q2.Controls.Add(this.bMetePrincipal);
             this.gBoxQ1Q2.Controls.Add(this.gBoxQ2);
             this.gBoxQ1Q2.Controls.Add(this.gBoxQ1);
             this.gBoxQ1Q2.Controls.Add(this.suspensao3);
@@ -430,9 +432,9 @@
             // 
             // bCalcTempHum
             // 
-            this.bCalcTempHum.Location = new System.Drawing.Point(106, 111);
+            this.bCalcTempHum.Location = new System.Drawing.Point(10, 111);
             this.bCalcTempHum.Name = "bCalcTempHum";
-            this.bCalcTempHum.Size = new System.Drawing.Size(134, 33);
+            this.bCalcTempHum.Size = new System.Drawing.Size(146, 33);
             this.bCalcTempHum.TabIndex = 2;
             this.bCalcTempHum.Text = "Calcular";
             this.bCalcTempHum.UseVisualStyleBackColor = true;
@@ -1176,6 +1178,16 @@
             this.linkGpro.Text = "Gpro";
             this.linkGpro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // bMetePrincipal
+            // 
+            this.bMetePrincipal.Location = new System.Drawing.Point(171, 111);
+            this.bMetePrincipal.Name = "bMetePrincipal";
+            this.bMetePrincipal.Size = new System.Drawing.Size(146, 33);
+            this.bMetePrincipal.TabIndex = 9;
+            this.bMetePrincipal.Text = "Copiar para Ajuste Principal";
+            this.bMetePrincipal.UseVisualStyleBackColor = true;
+            this.bMetePrincipal.Click += new System.EventHandler(this.bMetePrincipal_Click);
+            // 
             // GproCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1326,6 +1338,7 @@
         private System.Windows.Forms.Label lOpacidade;
         private System.Windows.Forms.TrackBar sliderOpacidade;
         private System.Windows.Forms.Label lPercentagem;
+        private System.Windows.Forms.Button bMetePrincipal;
     }
 }
 
