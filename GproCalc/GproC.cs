@@ -221,7 +221,7 @@ namespace carWindow
             bCalcTempHum.Text = "Calculate";
             bCalcAjuste.Text = "Calculate";
             bMetePrincipal.Text = "Copy to Main Setup";
-            bCleanPilot.Text = "Limpar";
+            bCleanPilot.Text = "Clear";
 
             //groupbox
             gBoxQ1Q2.Text = "Convert from Q1 to Q2";
