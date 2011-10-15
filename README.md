@@ -1,4 +1,4 @@
-# Car and Driver calculators for Gpro.net in C#
+# Car and Driver calculators for Gpro.net in C Sharp
 This program is free software; you can redistribute it and/or modify it.
 
 Developed by me in my free time, with the help of Rodrigo Antunes and Joao Apolinario.
