@@ -76,6 +76,7 @@
             this.tBoxFelicidade = new System.Windows.Forms.TextBox();
             this.lFelicidade = new System.Windows.Forms.Label();
             this.gBoxPiloto = new System.Windows.Forms.GroupBox();
+            this.bCleanPilot = new System.Windows.Forms.Button();
             this.motv = new System.Windows.Forms.TextBox();
             this.lMotiv = new System.Windows.Forms.Label();
             this.stam = new System.Windows.Forms.TextBox();
@@ -118,10 +119,11 @@
             this.sempreNoTopoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.gproCalcGitHubToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.linkGpro = new System.Windows.Forms.LinkLabel();
-            this.bCleanPilot = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.conversor.SuspendLayout();
             this.gBoxRain.SuspendLayout();
@@ -143,9 +145,6 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.conversor);
             this.tabControl1.Controls.Add(this.piloto);
             this.tabControl1.Controls.Add(this.Opcoes);
@@ -391,7 +390,6 @@
             this.suspensao3.ReadOnly = true;
             this.suspensao3.Size = new System.Drawing.Size(100, 20);
             this.suspensao3.TabIndex = 8;
-            this.suspensao3.TextChanged += new System.EventHandler(this.suspensao3_TextChanged);
             // 
             // cambios3
             // 
@@ -400,7 +398,6 @@
             this.cambios3.ReadOnly = true;
             this.cambios3.Size = new System.Drawing.Size(100, 20);
             this.cambios3.TabIndex = 7;
-            this.cambios3.TextChanged += new System.EventHandler(this.cambios3_TextChanged);
             // 
             // freios3
             // 
@@ -409,7 +406,6 @@
             this.freios3.ReadOnly = true;
             this.freios3.Size = new System.Drawing.Size(100, 20);
             this.freios3.TabIndex = 6;
-            this.freios3.TextChanged += new System.EventHandler(this.freios3_TextChanged);
             // 
             // motor3
             // 
@@ -418,7 +414,6 @@
             this.motor3.ReadOnly = true;
             this.motor3.Size = new System.Drawing.Size(100, 20);
             this.motor3.TabIndex = 5;
-            this.motor3.TextChanged += new System.EventHandler(this.motor3_TextChanged);
             // 
             // asaT3
             // 
@@ -427,7 +422,6 @@
             this.asaT3.ReadOnly = true;
             this.asaT3.Size = new System.Drawing.Size(100, 20);
             this.asaT3.TabIndex = 4;
-            this.asaT3.TextChanged += new System.EventHandler(this.asaT3_TextChanged);
             // 
             // asaD3
             // 
@@ -436,7 +430,6 @@
             this.asaD3.ReadOnly = true;
             this.asaD3.Size = new System.Drawing.Size(100, 20);
             this.asaD3.TabIndex = 3;
-            this.asaD3.TextChanged += new System.EventHandler(this.asaD3_TextChanged);
             // 
             // bCalcTempHum
             // 
@@ -478,6 +471,7 @@
             this.suspensao.Size = new System.Drawing.Size(100, 20);
             this.suspensao.TabIndex = 11;
             this.suspensao.Text = "0";
+            this.suspensao.Enter += new System.EventHandler(this.suspensao_Enter);
             // 
             // cambios
             // 
@@ -488,6 +482,7 @@
             this.cambios.Size = new System.Drawing.Size(100, 20);
             this.cambios.TabIndex = 9;
             this.cambios.Text = "0";
+            this.cambios.Enter += new System.EventHandler(this.cambios_Enter);
             // 
             // freios
             // 
@@ -498,6 +493,7 @@
             this.freios.Size = new System.Drawing.Size(100, 20);
             this.freios.TabIndex = 7;
             this.freios.Text = "0";
+            this.freios.Enter += new System.EventHandler(this.freios_Enter);
             // 
             // motor
             // 
@@ -508,6 +504,7 @@
             this.motor.Size = new System.Drawing.Size(100, 20);
             this.motor.TabIndex = 5;
             this.motor.Text = "0";
+            this.motor.Enter += new System.EventHandler(this.motor_Enter);
             // 
             // asaT
             // 
@@ -518,6 +515,7 @@
             this.asaT.Size = new System.Drawing.Size(100, 20);
             this.asaT.TabIndex = 3;
             this.asaT.Text = "0";
+            this.asaT.Enter += new System.EventHandler(this.asaT_Enter);
             // 
             // asaD
             // 
@@ -528,6 +526,7 @@
             this.asaD.Size = new System.Drawing.Size(100, 20);
             this.asaD.TabIndex = 1;
             this.asaD.Text = "0";
+            this.asaD.Enter += new System.EventHandler(this.asaD_Enter);
             // 
             // lSuspensao
             // 
@@ -713,6 +712,16 @@
             this.gBoxPiloto.TabIndex = 1;
             this.gBoxPiloto.TabStop = false;
             this.gBoxPiloto.Text = "Piloto";
+            // 
+            // bCleanPilot
+            // 
+            this.bCleanPilot.Location = new System.Drawing.Point(10, 290);
+            this.bCleanPilot.Name = "bCleanPilot";
+            this.bCleanPilot.Size = new System.Drawing.Size(223, 33);
+            this.bCleanPilot.TabIndex = 18;
+            this.bCleanPilot.Text = "Limpar";
+            this.bCleanPilot.UseVisualStyleBackColor = true;
+            this.bCleanPilot.Click += new System.EventHandler(this.bCleanPilot_Click);
             // 
             // motv
             // 
@@ -1060,31 +1069,35 @@
             // abrirToolStripMenuItem
             // 
             this.abrirToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("abrirToolStripMenuItem.Image")));
+            this.abrirToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
             this.abrirToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.abrirToolStripMenuItem.Text = "A&brir";
             this.abrirToolStripMenuItem.Click += new System.EventHandler(this.abrirToolStripMenuItem_Click);
             // 
             // gravarToolStripMenuItem
             // 
             this.gravarToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gravarToolStripMenuItem.Image")));
+            this.gravarToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Transparent;
             this.gravarToolStripMenuItem.Name = "gravarToolStripMenuItem";
             this.gravarToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.gravarToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.gravarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.gravarToolStripMenuItem.Text = "&Gravar";
             this.gravarToolStripMenuItem.Click += new System.EventHandler(this.gravarToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(145, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Image = global::GPROCalc.Properties.Resources.exit;
+            this.exitToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "&Sair";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -1134,7 +1147,9 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.gproCalcGitHubToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.helpToolStripMenuItem.Text = "&Ajuda";
@@ -1143,9 +1158,23 @@
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.aboutToolStripMenuItem.Text = "S&obre";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(169, 6);
+            // 
+            // gproCalcGitHubToolStripMenuItem
+            // 
+            this.gproCalcGitHubToolStripMenuItem.Image = global::GPROCalc.Properties.Resources.github_icon;
+            this.gproCalcGitHubToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.White;
+            this.gproCalcGitHubToolStripMenuItem.Name = "gproCalcGitHubToolStripMenuItem";
+            this.gproCalcGitHubToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.gproCalcGitHubToolStripMenuItem.Text = "GproCalc@GitHub";
+            this.gproCalcGitHubToolStripMenuItem.Click += new System.EventHandler(this.gproCalcGitHubToolStripMenuItem_Click);
             // 
             // saveFileDialog1
             // 
@@ -1172,16 +1201,6 @@
             this.linkGpro.TabStop = true;
             this.linkGpro.Text = "Gpro";
             this.linkGpro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // bCleanPilot
-            // 
-            this.bCleanPilot.Location = new System.Drawing.Point(10, 290);
-            this.bCleanPilot.Name = "bCleanPilot";
-            this.bCleanPilot.Size = new System.Drawing.Size(223, 33);
-            this.bCleanPilot.TabIndex = 18;
-            this.bCleanPilot.Text = "Limpar";
-            this.bCleanPilot.UseVisualStyleBackColor = true;
-            this.bCleanPilot.Click += new System.EventHandler(this.bCleanPilot_Click);
             // 
             // GproCalc
             // 
@@ -1331,6 +1350,8 @@
         private System.Windows.Forms.Label lPercentagem;
         private System.Windows.Forms.Button bMetePrincipal;
         private System.Windows.Forms.Button bCleanPilot;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem gproCalcGitHubToolStripMenuItem;
     }
 }
 

@@ -114,19 +114,12 @@ namespace carWindow
             form.Show();
         }
 
-
         private void CheckKeys(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-
             if (e.KeyChar == (char)13)
-            {
                 if (tabControl1.SelectedIndex == 1)
-                {
                     calc_window_Click(sender, e);
-                }
-            }
         }
-
 
         private void motv_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -173,6 +166,7 @@ namespace carWindow
             this.conc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(CheckKeys);
         }
 
+        #region traducoes
         private void en_CheckedChanged(object sender, EventArgs e)
         {
             mudaParaEN();
@@ -336,6 +330,7 @@ namespace carWindow
             //Text
             txtAjuste.Text = ("Quando estiver a calcular os valores dos ajustes do carro, encontra o valor máximo, ou mínimo, em que o piloto está sastifeito com os ajustes.\n\nO piloto estará feliz com a afinação dentro da margem do valor da caixa Zona de felicidade.\n\nDe seguida, caso se tenha encontrado o valor máximo, subtrair o valor indicado, e caso se tenha encontrado o mínimo, somar.");
         }
+        #endregion
 
         private void gravarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -379,6 +374,7 @@ namespace carWindow
                 fs.Close();
             }
         }
+
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFileDialog1.ShowDialog();
@@ -556,36 +552,6 @@ namespace carWindow
             lPercentagem.Text = sliderOpacidade.Value.ToString() + " %";
         }
 
-        private void asaD3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void asaT3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void motor3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void freios3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cambios3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void suspensao3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void bMetePrincipal_Click(object sender, EventArgs e)
         {
             button3_Click(sender, e);
@@ -598,6 +564,31 @@ namespace carWindow
             suspensao.Text = suspensao3.Text;
         }
 
+        private void bCleanPilot_Click(object sender, EventArgs e)
+        {
+            conc.Text = "0";
+            tal.Text = "0";
+            agr.Text = "0";
+            exp.Text = "0";
+            ti.Text = "0";
+            stam.Text = "0";
+            cari.Text = "0";
+            motv.Text = "0";
+            peso.Text = "0";
+
+            calc_window_Click(sender,e);
+
+            tBoxValor.Text = "";
+            tBoxFelicidade.Text = "";
+        }
+
+        private void gproCalcGitHubToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo("https://github.com/Ricardo1991/GproCalc");
+            Process.Start(sInfo);
+        }
+
+        #region enter
         private void conc_Enter(object sender, EventArgs e)
         {
             conc.SelectAll();
@@ -642,25 +633,35 @@ namespace carWindow
         {
             peso.SelectAll();
         }
-
-        private void bCleanPilot_Click(object sender, EventArgs e)
+        private void asaD_Enter(object sender, EventArgs e)
         {
-            conc.Text = "0";
-            tal.Text = "0";
-            agr.Text = "0";
-            exp.Text = "0";
-            ti.Text = "0";
-            stam.Text = "0";
-            cari.Text = "0";
-            motv.Text = "0";
-            peso.Text = "0";
-
-            calc_window_Click(sender,e);
-
-            tBoxValor.Text = "";
-            tBoxFelicidade.Text = "";
+            asaD.SelectAll();
+        }
+        private void asaT_Enter(object sender, EventArgs e)
+        {
+            asaT.SelectAll();
         }
 
+        private void motor_Enter(object sender, EventArgs e)
+        {
+            motor.SelectAll();
+        }
+
+        private void freios_Enter(object sender, EventArgs e)
+        {
+            freios.SelectAll();
+        }
+
+        private void cambios_Enter(object sender, EventArgs e)
+        {
+            cambios.SelectAll();
+        }
+
+        private void suspensao_Enter(object sender, EventArgs e)
+        {
+            suspensao.SelectAll();
+        }
+        #endregion
     }
 }
 
