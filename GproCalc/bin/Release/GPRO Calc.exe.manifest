@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Resources\gprocalc.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="GPRO Calc" version="1.4.4307.40709" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="GPRO Calc" version="1.4.4307.41476" language="neutral" processorArchitecture="x86" />
     <commandLine file="GPRO Calc.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -44,13 +44,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GPRO Calc.exe" size="392192">
-      <assemblyIdentity name="GPRO Calc" version="1.4.4307.40709" language="neutral" processorArchitecture="x86" />
+      <assemblyIdentity name="GPRO Calc" version="1.4.4307.41476" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>K1AmIUP8+L5tcvI2WoYARaTNjDA=</dsig:DigestValue>
+        <dsig:DigestValue>W9C10s6vsLUX9Th2zpKQ3bFp7rg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
