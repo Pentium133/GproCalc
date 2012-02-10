@@ -9,13 +9,25 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 
+
+
 namespace carWindow
 {
     public partial class GproCalc : Form
     {
+        string erro;
+        string erroCar;
+        string erroQ;
+        string erroP;
+        string erroLerFile;
+        string erroFileInvalido;
+        string erroGravarFile;
+
         public GproCalc()
         {
             InitializeComponent();
+
+            
 
             if (GPROCalc.Properties.Settings.Default.Language == "EN")
             {
@@ -62,7 +74,43 @@ namespace carWindow
                 suspensao2.Text = (_suspensao).ToString();
 
             }
-            catch { }
+            catch { MessageBox.Show(erroCar,erro,MessageBoxButtons.OK,MessageBoxIcon.Error); }
+        }
+
+        private void molh_sec_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int _asaD = Convert.ToInt32(asaD.Text) - 135;
+                int _asaT = Convert.ToInt32(asaT.Text) - 135;
+                int _motor = Convert.ToInt32(motor.Text) + 100;
+                int _freios = Convert.ToInt32(freios.Text) - 50;
+                int _cambios = Convert.ToInt32(cambios.Text) + 100;
+                int _suspensao = Convert.ToInt32(suspensao.Text) + 100;
+
+                if (_asaD > 999) _asaD = 999;
+                if (_asaT > 999) _asaT = 999;
+                if (_motor > 999) _motor = 999;
+                if (_freios > 999) _freios = 999;
+                if (_cambios > 999) _cambios = 999;
+                if (_suspensao > 999) _suspensao = 999;
+
+                if (_asaD < 0) _asaD = 0;
+                if (_asaT < 0) _asaT = 0;
+                if (_motor < 0) _motor = 0;
+                if (_freios < 0) _freios = 0;
+                if (_cambios < 0) _cambios = 0;
+                if (_suspensao < 0) _suspensao = 0;
+
+                asaD2.Text = (_asaD).ToString();
+                asaT2.Text = (_asaT).ToString();
+                motor2.Text = (_motor).ToString();
+                freios2.Text = (_freios).ToString();
+                cambio2.Text = (_cambios).ToString();
+                suspensao2.Text = (_suspensao).ToString();
+
+            }
+            catch { MessageBox.Show(erroCar, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -99,7 +147,7 @@ namespace carWindow
                 cambios3.Text = (_cambios).ToString();
                 suspensao3.Text = (_suspensao).ToString();
             }
-            catch { }
+            catch { MessageBox.Show(erroQ, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
         }
 
@@ -121,6 +169,7 @@ namespace carWindow
                     calc_window_Click(sender, e);
         }
 
+        #region keypress
         private void motv_KeyPress(object sender, KeyPressEventArgs e)
         {
             this.motv.KeyPress += new System.Windows.Forms.KeyPressEventHandler(CheckKeys);
@@ -165,7 +214,7 @@ namespace carWindow
         {
             this.conc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(CheckKeys);
         }
-
+#endregion
         #region traducoes
         private void en_CheckedChanged(object sender, EventArgs e)
         {
@@ -181,7 +230,6 @@ namespace carWindow
             portugêsToolStripMenuItem.Checked = false;
             GPROCalc.Properties.Settings.Default.Language = "EN";
             GPROCalc.Properties.Settings.Default.Save();
-
 
             //Label
             lValor.Text = "Technical insight";
@@ -251,7 +299,13 @@ namespace carWindow
 
             //Text
             txtAjuste.Text = ("When configurating the car ajustments, find the max or minimum value that the pillot is happy with.\n\nThe pilot will be happy with the car ajustment if it is inside the Happy Zone margin.\n\nNext, if you found the max value, subtract the ammount calculated, and if you found the minimum, add the value.");
-
+            erro = "Error";
+            erroCar = "Invalid data in Car fields";
+            erroQ = "Invalid data in Qualification or Car fields";
+            erroP = "Invalid data in Pilot fields";
+            erroLerFile = "Error while reading the File. It may be corrupted";
+            erroFileInvalido = "Invalid File!";
+            erroGravarFile = "Error while saving file";
         }
 
         private void mudaParaPT()
@@ -329,9 +383,16 @@ namespace carWindow
 
             //Text
             txtAjuste.Text = ("Quando estiver a calcular os valores dos ajustes do carro, encontra o valor máximo, ou mínimo, em que o piloto está sastifeito com os ajustes.\n\nO piloto estará feliz com a afinação dentro da margem do valor da caixa Zona de felicidade.\n\nDe seguida, caso se tenha encontrado o valor máximo, subtrair o valor indicado, e caso se tenha encontrado o mínimo, somar.");
+            erro = "Erro";
+            erroCar = "Dados inválidos no Carro";
+            erroQ = "Dados inválidos na Qualificação ou no Carro";
+            erroP = "Dados inválidos no Piloto";
+            erroLerFile = "Erro ao ler do ficheiro. O ficheiro poderá estar corrupto";
+            erroFileInvalido = "Ficheiro inválido!";
+            erroGravarFile = "Erro ao gravar o ficheiro";
         }
         #endregion
-
+        #region files
         private void gravarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFileDialog1.ShowDialog();
@@ -370,7 +431,7 @@ namespace carWindow
                     fs.WriteLine("{0}", tBoxHum2.Text);
                     
                 }
-                catch { }
+                catch { MessageBox.Show(erroGravarFile, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 fs.Close();
             }
         }
@@ -412,9 +473,9 @@ namespace carWindow
                         tBoxHum1.Text = file.ReadLine();
                         tBoxHum2.Text = file.ReadLine();
                     }
-                    catch { }
+                    catch { MessageBox.Show(erroLerFile, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 }
-                else { MessageBox.Show("Invalid File!"); }
+                else { MessageBox.Show(erroFileInvalido, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 file.Close();
 
                 calc_window_Click(sender, e);
@@ -422,41 +483,7 @@ namespace carWindow
             }
         }
 
-        private void molh_sec_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                int _asaD = Convert.ToInt32(asaD.Text) - 135;
-                int _asaT = Convert.ToInt32(asaT.Text) - 135;
-                int _motor = Convert.ToInt32(motor.Text) + 100;
-                int _freios = Convert.ToInt32(freios.Text) - 50;
-                int _cambios = Convert.ToInt32(cambios.Text) + 100;
-                int _suspensao = Convert.ToInt32(suspensao.Text) + 100;
-
-                if (_asaD > 999) _asaD = 999;
-                if (_asaT > 999) _asaT = 999;
-                if (_motor > 999) _motor = 999;
-                if (_freios > 999) _freios = 999;
-                if (_cambios > 999) _cambios = 999;
-                if (_suspensao > 999) _suspensao = 999;
-
-                if (_asaD < 0) _asaD = 0;
-                if (_asaT < 0) _asaT = 0;
-                if (_motor < 0) _motor = 0;
-                if (_freios < 0) _freios = 0;
-                if (_cambios < 0) _cambios = 0;
-                if (_suspensao < 0) _suspensao = 0;
-
-                asaD2.Text = (_asaD).ToString();
-                asaT2.Text = (_asaT).ToString();
-                motor2.Text = (_motor).ToString();
-                freios2.Text = (_freios).ToString();
-                cambio2.Text = (_cambios).ToString();
-                suspensao2.Text = (_suspensao).ToString();
-
-            }
-            catch { }
-        }
+        #endregion
 
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -470,7 +497,9 @@ namespace carWindow
             pt.Checked = true;
         }
 
-        private void calc_window_Click(object sender, EventArgs e)
+       
+
+        private void calcula_window()
         {
             try
             {
@@ -482,7 +511,7 @@ namespace carWindow
                 calc = Math.Round(calc);
                 tBoxTotal.Text = calc.ToString();
             }
-            catch { }
+            catch { MessageBox.Show(erroP, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
             try
             {
@@ -490,7 +519,35 @@ namespace carWindow
                 tBoxFelicidade.Text = (Math.Ceiling((exp * -0.2931) + 130.61)).ToString();
                 tBoxValor.Text = Math.Ceiling((((exp * -0.2931) + 130.61) / 2)).ToString();
             }
-            catch { }
+            catch { MessageBox.Show(erroP, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        
+        }
+        private void calcula_window2()
+        {
+            try
+            {
+                double calc = (Convert.ToDouble(conc.Text) * 0.167) + (Convert.ToDouble(tal.Text)* 0.249) + (Convert.ToDouble(agr.Text) * 0.145) +
+                    (Convert.ToDouble(exp.Text) * 0.087) + (Convert.ToDouble(ti.Text) * 0.125) + (Convert.ToDouble(stam.Text) * 0.145) +
+                    (Convert.ToDouble(cari.Text) * 0.083) +(Convert.ToDouble(motv.Text) * 0.084)- (Convert.ToDouble(peso.Text) * 0.085);
+                
+                tBoxTotal.Text = calc.ToString();
+            }
+            catch { MessageBox.Show(erroP, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+            try
+            {
+                double exp = Convert.ToDouble(ti.Text);
+                tBoxFelicidade.Text = (Math.Ceiling((exp * -0.2931) + 130.61)).ToString();
+                tBoxValor.Text = Math.Ceiling((((exp * -0.2931) + 130.61) / 2)).ToString();
+            }
+            catch { MessageBox.Show(erroP, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); }
+
+        }
+
+        private void calc_window_Click(object sender, EventArgs e)
+        {
+            calcula_window();
+            //calcula_window2();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
