@@ -9,7 +9,6 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 
-
 namespace carWindow
 {
     public partial class GproCalc : Form
@@ -23,25 +22,50 @@ namespace carWindow
         string erroGravarFile;
         string newPath;
 
+        bool old;
+
         public GproCalc()
         {
             InitializeComponent();
 
-            
-            if (GPROCalc.Properties.Settings.Default.Language == "EN")
+            switch (GPROCalc.Properties.Settings.Default.Language)
             {
-                en.Checked = true;
-                changeToEN();
+                case "EN":
+                        en.Checked = true;
+                        changeToEN();
+                    break;
+
+                case "PT":
+                    break;
+
+                case "PL":
+                        pl.Checked = true;
+                        changeToPL();
+                    break;
+                default: 
+                    break;
             }
+
+            if (GPROCalc.Properties.Settings.Default.Method == true)
+            {
+                old = true;
+                rB_old.Checked = true;
+                rB_new.Checked = false;
+            }
+            else { 
+                old = false;
+                rB_old.Checked = false;
+                rB_new.Checked = true;
+            }
+
 
             if (GPROCalc.Properties.Settings.Default.AlwaysOnTop == true)
             {
-                sempreTopo();
+                alwaysTop();
             }
 
             loadDrivers();
         }
-
 
         private void loadDrivers()
         {
@@ -67,7 +91,6 @@ namespace carWindow
 
         private void loadDrivers(int pilotNumber)
         {
-
             string path = Path.GetDirectoryName(Application.ExecutablePath);
             newPath = System.IO.Path.Combine(path, "Pilots");
 
@@ -82,7 +105,6 @@ namespace carWindow
             {
                 try
                 {
-
                     conc.Text = file.ReadLine();
                     tal.Text = file.ReadLine();
                     agr.Text = file.ReadLine();
@@ -93,14 +115,12 @@ namespace carWindow
                     motv.Text = file.ReadLine();
                     peso.Text = file.ReadLine();
                     t_PName.Text = file.ReadLine();
-                    
                 }
                 catch
                 {
                     MessageBox.Show(erroLerFile, erro, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 file.Close();
-
             }
         }
 
@@ -287,11 +307,17 @@ namespace carWindow
         {
             changeToPT();
         }
-        private void changeToEN()
+        private void pl_CheckedChanged(object sender, EventArgs e)
         {
-            englishToolStripMenuItem.Checked = true;
+            changeToPL();
+        }
+
+        private void changeToPL()
+        {
+            englishToolStripMenuItem.Checked = false;
             portugêsToolStripMenuItem.Checked = false;
-            GPROCalc.Properties.Settings.Default.Language = "EN";
+            polacoToolStripMenuItem.Checked = true;
+            GPROCalc.Properties.Settings.Default.Language = "PL";
             GPROCalc.Properties.Settings.Default.Save();
 
             //Label
@@ -361,6 +387,101 @@ namespace carWindow
             línguaToolStripMenuItem.Text = "&Language";
             portugêsToolStripMenuItem.Text = "Por&tuguese";
             englishToolStripMenuItem.Text = "E&nglish";
+            polacoToolStripMenuItem.Text = "Polish";
+            sempreNoTopoToolStripMenuItem.Text = "A&lways on Top";
+
+            //Text
+            txtAjuste.Text = ("When configurating the car ajustments, find the max or minimum value that the pillot is happy with.\n\nThe pilot will be happy with the car ajustment if it is inside the Happy Zone margin.\n\nNext, if you found the max value, subtract the ammount calculated, and if you found the minimum, add the value.");
+            erro = "Error";
+            erroCar = "Invalid data in Car fields";
+            erroQ = "Invalid data in Qualification or Car fields";
+            erroP = "Invalid data in Pilot fields";
+            erroLerFile = "Error while reading the File. It may be corrupted";
+            erroFileInvalido = "Invalid File!";
+            erroGravarFile = "Error while saving file";
+        }
+
+        private void changeToEN()
+        {
+            englishToolStripMenuItem.Checked = true;
+            portugêsToolStripMenuItem.Checked = false;
+            polacoToolStripMenuItem.Checked = false;
+            GPROCalc.Properties.Settings.Default.Language = "EN";
+            GPROCalc.Properties.Settings.Default.Save();
+
+            //Label
+            lValor.Text = "Technical insight";
+            lFelicidade.Text = "Happy Zone";
+            lValor.Text = "Value to Add/Subtract";
+            lTotal.Text = "Total";
+            lMotiv.Text = "Motivation";
+            lPeso.Text = "Weight";
+            lCarisma.Text = "Charisma";
+            lResist.Text = "Stamina";
+            lCTecn.Text = "Tech. insight";
+            lExp.Text = "Experience";
+            lAgress.Text = "Aggressiveness";
+            lTalento.Text = "Talent";
+            lConcentra.Text = "Concentration";
+            lAsaD.Text = "Front wing";
+            lAsaT.Text = "Rear wing";
+            lMotor.Text = "Engine";
+            lFreios.Text = "Brakes";
+            lCambio.Text = "Gear";
+            lSuspensao.Text = "Suspension";
+            lHum2.Text = "Humidity";
+            lHum1.Text = "Humidity";
+            lTemp2.Text = "Temperature";
+            lTemp1.Text = "Temperature";
+            lOpacidade.Text = "Opacity";
+            labelPilotList.Text = "Choose Saved Pilot";
+            l_PName.Text = "Pilot Name";
+
+            //Buttons
+            bSec_molh.Text = "Dry --> Wet";
+            bMolh_sec.Text = "Wet --> Dry";
+            bCalcTempHum.Text = "Calculate";
+            bCalcAjuste.Text = "Calculate";
+            bMetePrincipal.Text = "Copy to Main Setup";
+            bCleanPilot.Text = "Clear";
+            bSavePilot.Text = "Save";
+
+            //rbutton
+            rB_old.Text = "Old";
+            rB_new.Text = "New";
+
+            //groupbox
+            gBoxQ1Q2.Text = "Convert from Q1 to Q2";
+            gBoxRain.Text = "Rain";
+            gBoxQ1.Text = "Qualification 1";
+            gBoxQ2.Text = "Qualification 2";
+            gBoxCarro.Text = "Car Setup";
+            Lang.Text = "Language";
+            gBoxPiloto.Text = "Pilot";
+            gBoxAjust.Text = "Setup Window";
+            gBoxOtherOptions.Text = "Other";
+            gBoxMetodo.Text = "Method";
+
+            //Box
+            cBoxTopo.Text = "Always on top";
+
+            //Tabpage
+            piloto.Text = "Pilot";
+            conversor.Text = "Converter";
+            Opcoes.Text = "Options";
+
+            //Menu
+            fileToolStripMenuItem.Text = "&File";
+            gravarToolStripMenuItem.Text = "&Save";
+            exitToolStripMenuItem.Text = "&Exit";
+            helpToolStripMenuItem.Text = "&Help";
+            aboutToolStripMenuItem.Text = "&About";
+            abrirToolStripMenuItem.Text = "&Open";
+            opçõesToolStripMenuItem.Text = "O&ptions";
+            línguaToolStripMenuItem.Text = "&Language";
+            portugêsToolStripMenuItem.Text = "Por&tuguese";
+            englishToolStripMenuItem.Text = "E&nglish";
+            polacoToolStripMenuItem.Text = "Polish";
             sempreNoTopoToolStripMenuItem.Text = "A&lways on Top";
 
             //Text
@@ -378,6 +499,7 @@ namespace carWindow
         {
             englishToolStripMenuItem.Checked = false;
             portugêsToolStripMenuItem.Checked = true;
+            polacoToolStripMenuItem.Checked = false;
             GPROCalc.Properties.Settings.Default.Language = "PT";
             GPROCalc.Properties.Settings.Default.Save();
 
@@ -407,7 +529,7 @@ namespace carWindow
             lTemp1.Text = "Temperatura";
             lOpacidade.Text = "Opacidade";
             labelPilotList.Text = "Escolher Piloto";
-            l_PName.Text = "Nome do Piloto Gravado";
+            l_PName.Text = "Nome do Piloto";
 
             //botoes
             bSec_molh.Text = "Seco --> Molhado";
@@ -417,6 +539,12 @@ namespace carWindow
             bMetePrincipal.Text = "Copiar para Ajuste Principal";
             bCleanPilot.Text = "Limpar";
             bSavePilot.Text = "Guardar";
+
+
+            //rbutton
+            rB_old.Text = "Velho";
+            rB_new.Text = "Novo";
+
 
             //groupbox
             gBoxCarro.Text = "Ajuste do Carro";
@@ -428,6 +556,7 @@ namespace carWindow
             gBoxAjust.Text = "Janela de Ajuste";
             Lang.Text = "Língua";
             gBoxOtherOptions.Text = "Outros";
+            gBoxMetodo.Text = "Método";
 
             //Tab
             piloto.Text = "Piloto";
@@ -446,6 +575,7 @@ namespace carWindow
             línguaToolStripMenuItem.Text = "&Língua";
             portugêsToolStripMenuItem.Text = "&Português";
             englishToolStripMenuItem.Text = "&English";
+            polacoToolStripMenuItem.Text = "Polaco";
             helpToolStripMenuItem.Text = "&Ajuda";
             aboutToolStripMenuItem.Text = "S&obre";
             sempreNoTopoToolStripMenuItem.Text = "Sempre no &Topo";
@@ -459,6 +589,24 @@ namespace carWindow
             erroLerFile = "Erro ao ler do ficheiro. O ficheiro poderá estar corrupto";
             erroFileInvalido = "Ficheiro inválido!";
             erroGravarFile = "Erro ao gravar o ficheiro";
+        }
+        
+        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            en_CheckedChanged(sender, e);
+            en.Checked = true;
+        }
+
+        private void portugêsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pt_CheckedChanged(sender, e);
+            pt.Checked = true;
+        }
+
+        private void polacoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pl_CheckedChanged(sender, e);
+            pl.Checked = true;
         }
         #endregion
         #region files
@@ -560,20 +708,6 @@ namespace carWindow
 
         #endregion
 
-        private void englishToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            en_CheckedChanged(sender, e);
-            en.Checked = true;
-        }
-
-        private void portugêsToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            pt_CheckedChanged(sender, e);
-            pt.Checked = true;
-        }
-
-       
-
         private void calcula_window()
         {
             try
@@ -604,16 +738,18 @@ namespace carWindow
                 double calc = (Convert.ToDouble(conc.Text) * 0.167) + (Convert.ToDouble(tal.Text)* 0.249) + (Convert.ToDouble(agr.Text) * 0.145) +
                     (Convert.ToDouble(exp.Text) * 0.087) + (Convert.ToDouble(ti.Text) * 0.125) + (Convert.ToDouble(stam.Text) * 0.145) +
                     (Convert.ToDouble(cari.Text) * 0.083) +(Convert.ToDouble(motv.Text) * 0.084)- (Convert.ToDouble(peso.Text) * 0.085);
-                
+
+                calc = Math.Round(calc);
+
                 tBoxTotal.Text = calc.ToString();
             }
             catch { MessageBox.Show(erroP, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
             try
             {
-                double exp = Convert.ToDouble(ti.Text);
-                tBoxFelicidade.Text = (Math.Ceiling((exp * -0.2931) + 130.61)).ToString();
-                tBoxValor.Text = Math.Ceiling((((exp * -0.2931) + 130.61) / 2)).ToString();
+
+                tBoxFelicidade.Text = Math.Round((135.0107 - 0.10172 * Convert.ToDouble(exp.Text) - 0.30014 * Convert.ToDouble(ti.Text))).ToString();
+                tBoxValor.Text = Math.Round((((Convert.ToDouble(ti.Text) * -0.2931) + 130.61) / 2)).ToString();
             }
             catch { MessageBox.Show(erroP, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); }
 
@@ -621,8 +757,10 @@ namespace carWindow
 
         private void calc_window_Click(object sender, EventArgs e)
         {
-            calcula_window();
-            //calcula_window2();
+            if(old)
+                calcula_window();
+            else
+                calcula_window2();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -640,7 +778,7 @@ namespace carWindow
             linkGpro.Links.Add(0, linkGpro.Text.Length, "http://gpro.net/");
         }
 
-        private void sempreTopo()
+        private void alwaysTop()
         {
             if (cBoxTopo.Checked == true)
             {
@@ -656,9 +794,9 @@ namespace carWindow
             }
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void cBoxTopo_CheckedChanged(object sender, EventArgs e)
         {
-            sempreTopo(); 
+            alwaysTop(); 
         }
 
         private void sempreNoTopoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -669,7 +807,7 @@ namespace carWindow
                 if (cBoxTopo.Checked == false)
                     cBoxTopo.Checked = true;
 
-            sempreTopo();
+            alwaysTop();
         }
 
         private void tOpacidade_Scroll(object sender, EventArgs e)
@@ -694,25 +832,6 @@ namespace carWindow
             freios.Text = freios3.Text;
             cambios.Text = cambios3.Text;
             suspensao.Text = suspensao3.Text;
-        }
-
-        private void bCleanPilot_Click(object sender, EventArgs e)
-        {
-            conc.Text = "0";
-            tal.Text = "0";
-            agr.Text = "0";
-            exp.Text = "0";
-            ti.Text = "0";
-            stam.Text = "0";
-            cari.Text = "0";
-            motv.Text = "0";
-            peso.Text = "0";
-            t_PName.Text = "Name";
-
-            calc_window_Click(sender,e);
-
-            tBoxValor.Text = "";
-            tBoxFelicidade.Text = "";
         }
 
         private void gproCalcGitHubToolStripMenuItem_Click(object sender, EventArgs e)
@@ -825,15 +944,44 @@ namespace carWindow
              loadDrivers();
                 
          }
-            
-        
 
+        private void bCleanPilot_Click(object sender, EventArgs e)
+        {
+            conc.Text = "0";
+            tal.Text = "0";
+            agr.Text = "0";
+            exp.Text = "0";
+            ti.Text = "0";
+            stam.Text = "0";
+            cari.Text = "0";
+            motv.Text = "0";
+            peso.Text = "0";
+            t_PName.Text = "Name";
+
+            calc_window_Click(sender,e);
+
+            tBoxValor.Text = "";
+            tBoxFelicidade.Text = "";
+        }
         private void PilotList_SelectedIndexChanged(object sender, EventArgs e)
         {
             //Load Selected Pilot
             loadDrivers(PilotList.SelectedIndex);
         }
 
+        private void rB_old_CheckedChanged(object sender, EventArgs e)
+        {
+            old = true;
+            GPROCalc.Properties.Settings.Default.Method = true;
+            GPROCalc.Properties.Settings.Default.Save();
+        }
+
+        private void rB_new_CheckedChanged(object sender, EventArgs e)
+        {
+            old = false;
+            GPROCalc.Properties.Settings.Default.Method = false;
+            GPROCalc.Properties.Settings.Default.Save();
+        }
     }
 }
 

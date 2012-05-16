@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using System.Resources;
 
 [assembly: AssemblyTitle("GPROCalc")]
-[assembly: AssemblyDescription("Special thanks to Rodrigo Antunes and João Apolinário")]
+[assembly: AssemblyDescription("Special thanks to Rodrigo Antunes, João Apolinário and Janusz Słodczyk")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Ricardo Ribeiro")]
 [assembly: AssemblyProduct("GPRO Calc")]
