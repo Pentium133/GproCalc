@@ -5,7 +5,7 @@ Developed by me in my free time, with the help of Rodrigo Antunes, Joao Apolinar
 
 #Download from my dropbox
 
-v1.7 16/05/2012 19:29
+v1.7 16/05/2012 19:51
 
 https://www.dropbox.com/s/7rcj22qe1rzrl0k/GPROCalc.rar
 
