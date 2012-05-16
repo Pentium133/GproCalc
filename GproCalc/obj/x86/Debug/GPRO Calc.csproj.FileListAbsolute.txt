@@ -28,4 +28,3 @@ C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\obj\x8
 C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\obj\x86\Debug\GPRO Calc.application
 C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\obj\x86\Debug\GPRO Calc.exe
 C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\obj\x86\Debug\GPRO Calc.pdb
-C:\Users\Ricardo\Documents\Visual Studio 2010\Projects\carWindow\GproCalc\obj\x86\Debug\GPRO Calc.csprojResolveAssemblyReference.cache

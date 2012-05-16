@@ -67,9 +67,12 @@
             this.lAsaD = new System.Windows.Forms.Label();
             this.piloto = new System.Windows.Forms.TabPage();
             this.gBoxAjust = new System.Windows.Forms.GroupBox();
+            this.gBoxMetodo = new System.Windows.Forms.GroupBox();
+            this.rB_new = new System.Windows.Forms.RadioButton();
+            this.rB_old = new System.Windows.Forms.RadioButton();
+            this.bCalcAjuste = new System.Windows.Forms.Button();
             this.lValor = new System.Windows.Forms.Label();
             this.tBoxTotal = new System.Windows.Forms.TextBox();
-            this.bCalcAjuste = new System.Windows.Forms.Button();
             this.lTotal = new System.Windows.Forms.Label();
             this.txtAjuste = new System.Windows.Forms.RichTextBox();
             this.tBoxValor = new System.Windows.Forms.TextBox();
@@ -107,6 +110,8 @@
             this.sliderOpacidade = new System.Windows.Forms.TrackBar();
             this.cBoxTopo = new System.Windows.Forms.CheckBox();
             this.Lang = new System.Windows.Forms.GroupBox();
+            this.plFlag = new System.Windows.Forms.PictureBox();
+            this.pl = new System.Windows.Forms.RadioButton();
             this.enFlag = new System.Windows.Forms.PictureBox();
             this.ptFlag = new System.Windows.Forms.PictureBox();
             this.en = new System.Windows.Forms.RadioButton();
@@ -121,6 +126,7 @@
             this.línguaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.portugêsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.polacoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sempreNoTopoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -138,11 +144,13 @@
             this.gBoxCarro.SuspendLayout();
             this.piloto.SuspendLayout();
             this.gBoxAjust.SuspendLayout();
+            this.gBoxMetodo.SuspendLayout();
             this.gBoxPiloto.SuspendLayout();
             this.Opcoes.SuspendLayout();
             this.gBoxOtherOptions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sliderOpacidade)).BeginInit();
             this.Lang.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.plFlag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enFlag)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptFlag)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -271,16 +279,16 @@
             this.gBoxQ1Q2.Controls.Add(this.bCalcTempHum);
             this.gBoxQ1Q2.Location = new System.Drawing.Point(7, 206);
             this.gBoxQ1Q2.Name = "gBoxQ1Q2";
-            this.gBoxQ1Q2.Size = new System.Drawing.Size(589, 191);
+            this.gBoxQ1Q2.Size = new System.Drawing.Size(589, 217);
             this.gBoxQ1Q2.TabIndex = 2;
             this.gBoxQ1Q2.TabStop = false;
             this.gBoxQ1Q2.Text = "Conversor de Q1 para Q2";
             // 
             // bMetePrincipal
             // 
-            this.bMetePrincipal.Location = new System.Drawing.Point(171, 133);
+            this.bMetePrincipal.Location = new System.Drawing.Point(193, 133);
             this.bMetePrincipal.Name = "bMetePrincipal";
-            this.bMetePrincipal.Size = new System.Drawing.Size(146, 33);
+            this.bMetePrincipal.Size = new System.Drawing.Size(160, 47);
             this.bMetePrincipal.TabIndex = 9;
             this.bMetePrincipal.Text = "Copiar para Ajuste Principal";
             this.bMetePrincipal.UseVisualStyleBackColor = true;
@@ -292,9 +300,9 @@
             this.gBoxQ2.Controls.Add(this.lHum2);
             this.gBoxQ2.Controls.Add(this.tBoxTemp2);
             this.gBoxQ2.Controls.Add(this.tBoxHum2);
-            this.gBoxQ2.Location = new System.Drawing.Point(171, 34);
+            this.gBoxQ2.Location = new System.Drawing.Point(193, 34);
             this.gBoxQ2.Name = "gBoxQ2";
-            this.gBoxQ2.Size = new System.Drawing.Size(146, 82);
+            this.gBoxQ2.Size = new System.Drawing.Size(160, 90);
             this.gBoxQ2.TabIndex = 1;
             this.gBoxQ2.TabStop = false;
             this.gBoxQ2.Text = "Qualificação 2";
@@ -320,7 +328,8 @@
             // tBoxTemp2
             // 
             this.tBoxTemp2.AllowDrop = true;
-            this.tBoxTemp2.Location = new System.Drawing.Point(96, 23);
+            this.tBoxTemp2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tBoxTemp2.Location = new System.Drawing.Point(110, 27);
             this.tBoxTemp2.MaxLength = 3;
             this.tBoxTemp2.Name = "tBoxTemp2";
             this.tBoxTemp2.Size = new System.Drawing.Size(35, 20);
@@ -330,7 +339,8 @@
             // tBoxHum2
             // 
             this.tBoxHum2.AllowDrop = true;
-            this.tBoxHum2.Location = new System.Drawing.Point(96, 49);
+            this.tBoxHum2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tBoxHum2.Location = new System.Drawing.Point(110, 53);
             this.tBoxHum2.MaxLength = 3;
             this.tBoxHum2.Name = "tBoxHum2";
             this.tBoxHum2.Size = new System.Drawing.Size(35, 20);
@@ -345,7 +355,7 @@
             this.gBoxQ1.Controls.Add(this.tBoxHum1);
             this.gBoxQ1.Location = new System.Drawing.Point(10, 34);
             this.gBoxQ1.Name = "gBoxQ1";
-            this.gBoxQ1.Size = new System.Drawing.Size(146, 82);
+            this.gBoxQ1.Size = new System.Drawing.Size(160, 90);
             this.gBoxQ1.TabIndex = 0;
             this.gBoxQ1.TabStop = false;
             this.gBoxQ1.Text = "Qualificação 1";
@@ -371,7 +381,8 @@
             // tBoxTemp1
             // 
             this.tBoxTemp1.AllowDrop = true;
-            this.tBoxTemp1.Location = new System.Drawing.Point(99, 23);
+            this.tBoxTemp1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tBoxTemp1.Location = new System.Drawing.Point(113, 27);
             this.tBoxTemp1.MaxLength = 3;
             this.tBoxTemp1.Name = "tBoxTemp1";
             this.tBoxTemp1.Size = new System.Drawing.Size(35, 20);
@@ -381,7 +392,8 @@
             // tBoxHum1
             // 
             this.tBoxHum1.AllowDrop = true;
-            this.tBoxHum1.Location = new System.Drawing.Point(99, 49);
+            this.tBoxHum1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.tBoxHum1.Location = new System.Drawing.Point(113, 53);
             this.tBoxHum1.MaxLength = 3;
             this.tBoxHum1.Name = "tBoxHum1";
             this.tBoxHum1.Size = new System.Drawing.Size(35, 20);
@@ -440,7 +452,7 @@
             // 
             this.bCalcTempHum.Location = new System.Drawing.Point(10, 133);
             this.bCalcTempHum.Name = "bCalcTempHum";
-            this.bCalcTempHum.Size = new System.Drawing.Size(146, 33);
+            this.bCalcTempHum.Size = new System.Drawing.Size(160, 47);
             this.bCalcTempHum.TabIndex = 2;
             this.bCalcTempHum.Text = "Calcular";
             this.bCalcTempHum.UseVisualStyleBackColor = true;
@@ -601,9 +613,9 @@
             // 
             // gBoxAjust
             // 
+            this.gBoxAjust.Controls.Add(this.gBoxMetodo);
             this.gBoxAjust.Controls.Add(this.lValor);
             this.gBoxAjust.Controls.Add(this.tBoxTotal);
-            this.gBoxAjust.Controls.Add(this.bCalcAjuste);
             this.gBoxAjust.Controls.Add(this.lTotal);
             this.gBoxAjust.Controls.Add(this.txtAjuste);
             this.gBoxAjust.Controls.Add(this.tBoxValor);
@@ -616,10 +628,59 @@
             this.gBoxAjust.TabStop = false;
             this.gBoxAjust.Text = "Janela de Ajuste";
             // 
+            // gBoxMetodo
+            // 
+            this.gBoxMetodo.Controls.Add(this.rB_new);
+            this.gBoxMetodo.Controls.Add(this.rB_old);
+            this.gBoxMetodo.Controls.Add(this.bCalcAjuste);
+            this.gBoxMetodo.Location = new System.Drawing.Point(12, 32);
+            this.gBoxMetodo.Name = "gBoxMetodo";
+            this.gBoxMetodo.Size = new System.Drawing.Size(295, 78);
+            this.gBoxMetodo.TabIndex = 6;
+            this.gBoxMetodo.TabStop = false;
+            this.gBoxMetodo.Text = "Método";
+            // 
+            // rB_new
+            // 
+            this.rB_new.AutoSize = true;
+            this.rB_new.Location = new System.Drawing.Point(7, 48);
+            this.rB_new.Name = "rB_new";
+            this.rB_new.Size = new System.Drawing.Size(51, 17);
+            this.rB_new.TabIndex = 1;
+            this.rB_new.TabStop = true;
+            this.rB_new.Text = "Novo";
+            this.rB_new.UseVisualStyleBackColor = true;
+            this.rB_new.CheckedChanged += new System.EventHandler(this.rB_new_CheckedChanged);
+            // 
+            // rB_old
+            // 
+            this.rB_old.AutoSize = true;
+            this.rB_old.Checked = true;
+            this.rB_old.Location = new System.Drawing.Point(7, 20);
+            this.rB_old.Name = "rB_old";
+            this.rB_old.Size = new System.Drawing.Size(52, 17);
+            this.rB_old.TabIndex = 0;
+            this.rB_old.TabStop = true;
+            this.rB_old.Text = "Velho";
+            this.rB_old.UseVisualStyleBackColor = true;
+            this.rB_old.CheckedChanged += new System.EventHandler(this.rB_old_CheckedChanged);
+            // 
+            // bCalcAjuste
+            // 
+            this.bCalcAjuste.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bCalcAjuste.Location = new System.Drawing.Point(178, 30);
+            this.bCalcAjuste.Name = "bCalcAjuste";
+            this.bCalcAjuste.Size = new System.Drawing.Size(100, 35);
+            this.bCalcAjuste.TabIndex = 0;
+            this.bCalcAjuste.Text = "Calcular";
+            this.bCalcAjuste.UseVisualStyleBackColor = true;
+            this.bCalcAjuste.Click += new System.EventHandler(this.calc_window_Click);
+            // 
             // lValor
             // 
             this.lValor.AutoSize = true;
-            this.lValor.Location = new System.Drawing.Point(9, 132);
+            this.lValor.Location = new System.Drawing.Point(9, 165);
             this.lValor.Name = "lValor";
             this.lValor.Size = new System.Drawing.Size(114, 13);
             this.lValor.TabIndex = 1;
@@ -628,28 +689,16 @@
             // tBoxTotal
             // 
             this.tBoxTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBoxTotal.Location = new System.Drawing.Point(191, 92);
+            this.tBoxTotal.Location = new System.Drawing.Point(191, 125);
             this.tBoxTotal.Name = "tBoxTotal";
             this.tBoxTotal.ReadOnly = true;
             this.tBoxTotal.Size = new System.Drawing.Size(100, 20);
             this.tBoxTotal.TabIndex = 2;
             // 
-            // bCalcAjuste
-            // 
-            this.bCalcAjuste.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bCalcAjuste.Location = new System.Drawing.Point(44, 36);
-            this.bCalcAjuste.Name = "bCalcAjuste";
-            this.bCalcAjuste.Size = new System.Drawing.Size(221, 35);
-            this.bCalcAjuste.TabIndex = 0;
-            this.bCalcAjuste.Text = "Calcular";
-            this.bCalcAjuste.UseVisualStyleBackColor = true;
-            this.bCalcAjuste.Click += new System.EventHandler(this.calc_window_Click);
-            // 
             // lTotal
             // 
             this.lTotal.AutoSize = true;
-            this.lTotal.Location = new System.Drawing.Point(9, 99);
+            this.lTotal.Location = new System.Drawing.Point(9, 132);
             this.lTotal.Name = "lTotal";
             this.lTotal.Size = new System.Drawing.Size(31, 13);
             this.lTotal.TabIndex = 1;
@@ -668,7 +717,7 @@
             // tBoxValor
             // 
             this.tBoxValor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBoxValor.Location = new System.Drawing.Point(190, 128);
+            this.tBoxValor.Location = new System.Drawing.Point(190, 161);
             this.tBoxValor.Name = "tBoxValor";
             this.tBoxValor.ReadOnly = true;
             this.tBoxValor.Size = new System.Drawing.Size(100, 20);
@@ -677,7 +726,7 @@
             // tBoxFelicidade
             // 
             this.tBoxFelicidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBoxFelicidade.Location = new System.Drawing.Point(190, 163);
+            this.tBoxFelicidade.Location = new System.Drawing.Point(190, 196);
             this.tBoxFelicidade.Name = "tBoxFelicidade";
             this.tBoxFelicidade.ReadOnly = true;
             this.tBoxFelicidade.Size = new System.Drawing.Size(100, 20);
@@ -686,7 +735,7 @@
             // lFelicidade
             // 
             this.lFelicidade.AutoSize = true;
-            this.lFelicidade.Location = new System.Drawing.Point(9, 167);
+            this.lFelicidade.Location = new System.Drawing.Point(9, 200);
             this.lFelicidade.Name = "lFelicidade";
             this.lFelicidade.Size = new System.Drawing.Size(95, 13);
             this.lFelicidade.TabIndex = 3;
@@ -727,7 +776,7 @@
             // 
             // t_PName
             // 
-            this.t_PName.Location = new System.Drawing.Point(90, 83);
+            this.t_PName.Location = new System.Drawing.Point(131, 83);
             this.t_PName.Name = "t_PName";
             this.t_PName.Size = new System.Drawing.Size(100, 20);
             this.t_PName.TabIndex = 23;
@@ -772,7 +821,7 @@
             // 
             // bCleanPilot
             // 
-            this.bCleanPilot.Location = new System.Drawing.Point(109, 369);
+            this.bCleanPilot.Location = new System.Drawing.Point(136, 369);
             this.bCleanPilot.Name = "bCleanPilot";
             this.bCleanPilot.Size = new System.Drawing.Size(95, 33);
             this.bCleanPilot.TabIndex = 18;
@@ -783,7 +832,7 @@
             // motv
             // 
             this.motv.AllowDrop = true;
-            this.motv.Location = new System.Drawing.Point(90, 308);
+            this.motv.Location = new System.Drawing.Point(131, 308);
             this.motv.MaxLength = 3;
             this.motv.Name = "motv";
             this.motv.Size = new System.Drawing.Size(100, 20);
@@ -804,7 +853,7 @@
             // stam
             // 
             this.stam.AllowDrop = true;
-            this.stam.Location = new System.Drawing.Point(90, 254);
+            this.stam.Location = new System.Drawing.Point(131, 254);
             this.stam.MaxLength = 3;
             this.stam.Name = "stam";
             this.stam.Size = new System.Drawing.Size(100, 20);
@@ -816,7 +865,7 @@
             // peso
             // 
             this.peso.AllowDrop = true;
-            this.peso.Location = new System.Drawing.Point(90, 334);
+            this.peso.Location = new System.Drawing.Point(131, 334);
             this.peso.MaxLength = 3;
             this.peso.Name = "peso";
             this.peso.Size = new System.Drawing.Size(100, 20);
@@ -828,7 +877,7 @@
             // ti
             // 
             this.ti.AllowDrop = true;
-            this.ti.Location = new System.Drawing.Point(90, 228);
+            this.ti.Location = new System.Drawing.Point(131, 228);
             this.ti.MaxLength = 3;
             this.ti.Name = "ti";
             this.ti.Size = new System.Drawing.Size(100, 20);
@@ -840,7 +889,7 @@
             // cari
             // 
             this.cari.AllowDrop = true;
-            this.cari.Location = new System.Drawing.Point(90, 280);
+            this.cari.Location = new System.Drawing.Point(131, 280);
             this.cari.MaxLength = 3;
             this.cari.Name = "cari";
             this.cari.Size = new System.Drawing.Size(100, 20);
@@ -861,7 +910,7 @@
             // exp
             // 
             this.exp.AllowDrop = true;
-            this.exp.Location = new System.Drawing.Point(90, 200);
+            this.exp.Location = new System.Drawing.Point(131, 200);
             this.exp.MaxLength = 3;
             this.exp.Name = "exp";
             this.exp.Size = new System.Drawing.Size(100, 20);
@@ -872,7 +921,7 @@
             // agr
             // 
             this.agr.AllowDrop = true;
-            this.agr.Location = new System.Drawing.Point(90, 174);
+            this.agr.Location = new System.Drawing.Point(131, 174);
             this.agr.MaxLength = 3;
             this.agr.Name = "agr";
             this.agr.Size = new System.Drawing.Size(100, 20);
@@ -884,7 +933,7 @@
             // tal
             // 
             this.tal.AllowDrop = true;
-            this.tal.Location = new System.Drawing.Point(90, 148);
+            this.tal.Location = new System.Drawing.Point(131, 148);
             this.tal.MaxLength = 3;
             this.tal.Name = "tal";
             this.tal.Size = new System.Drawing.Size(100, 20);
@@ -896,7 +945,7 @@
             // conc
             // 
             this.conc.AllowDrop = true;
-            this.conc.Location = new System.Drawing.Point(90, 122);
+            this.conc.Location = new System.Drawing.Point(131, 122);
             this.conc.MaxLength = 3;
             this.conc.Name = "conc";
             this.conc.Size = new System.Drawing.Size(100, 20);
@@ -1035,10 +1084,12 @@
             this.cBoxTopo.TabIndex = 9;
             this.cBoxTopo.Text = "Sempre no topo";
             this.cBoxTopo.UseVisualStyleBackColor = true;
-            this.cBoxTopo.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.cBoxTopo.CheckedChanged += new System.EventHandler(this.cBoxTopo_CheckedChanged);
             // 
             // Lang
             // 
+            this.Lang.Controls.Add(this.plFlag);
+            this.Lang.Controls.Add(this.pl);
             this.Lang.Controls.Add(this.enFlag);
             this.Lang.Controls.Add(this.ptFlag);
             this.Lang.Controls.Add(this.en);
@@ -1050,11 +1101,34 @@
             this.Lang.TabStop = false;
             this.Lang.Text = "Língua";
             // 
+            // plFlag
+            // 
+            this.plFlag.Image = ((System.Drawing.Image)(resources.GetObject("plFlag.Image")));
+            this.plFlag.InitialImage = null;
+            this.plFlag.Location = new System.Drawing.Point(10, 138);
+            this.plFlag.Name = "plFlag";
+            this.plFlag.Size = new System.Drawing.Size(48, 48);
+            this.plFlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.plFlag.TabIndex = 5;
+            this.plFlag.TabStop = false;
+            // 
+            // pl
+            // 
+            this.pl.AutoSize = true;
+            this.pl.Location = new System.Drawing.Point(67, 156);
+            this.pl.Name = "pl";
+            this.pl.Size = new System.Drawing.Size(53, 17);
+            this.pl.TabIndex = 4;
+            this.pl.TabStop = true;
+            this.pl.Text = "Polish";
+            this.pl.UseVisualStyleBackColor = true;
+            this.pl.CheckedChanged += new System.EventHandler(this.pl_CheckedChanged);
+            // 
             // enFlag
             // 
             this.enFlag.Image = ((System.Drawing.Image)(resources.GetObject("enFlag.Image")));
             this.enFlag.InitialImage = null;
-            this.enFlag.Location = new System.Drawing.Point(10, 82);
+            this.enFlag.Location = new System.Drawing.Point(10, 81);
             this.enFlag.Name = "enFlag";
             this.enFlag.Size = new System.Drawing.Size(48, 48);
             this.enFlag.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -1075,7 +1149,7 @@
             // en
             // 
             this.en.AutoSize = true;
-            this.en.Location = new System.Drawing.Point(67, 99);
+            this.en.Location = new System.Drawing.Point(67, 97);
             this.en.Name = "en";
             this.en.Size = new System.Drawing.Size(59, 17);
             this.en.TabIndex = 1;
@@ -1170,7 +1244,8 @@
             // 
             this.línguaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.portugêsToolStripMenuItem,
-            this.englishToolStripMenuItem});
+            this.englishToolStripMenuItem,
+            this.polacoToolStripMenuItem});
             this.línguaToolStripMenuItem.Name = "línguaToolStripMenuItem";
             this.línguaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.línguaToolStripMenuItem.Text = "&Língua";
@@ -1192,6 +1267,13 @@
             this.englishToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.englishToolStripMenuItem.Text = "&English";
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
+            // 
+            // polacoToolStripMenuItem
+            // 
+            this.polacoToolStripMenuItem.Name = "polacoToolStripMenuItem";
+            this.polacoToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.polacoToolStripMenuItem.Text = "P&olish";
+            this.polacoToolStripMenuItem.Click += new System.EventHandler(this.polacoToolStripMenuItem_Click);
             // 
             // sempreNoTopoToolStripMenuItem
             // 
@@ -1287,6 +1369,8 @@
             this.piloto.ResumeLayout(false);
             this.gBoxAjust.ResumeLayout(false);
             this.gBoxAjust.PerformLayout();
+            this.gBoxMetodo.ResumeLayout(false);
+            this.gBoxMetodo.PerformLayout();
             this.gBoxPiloto.ResumeLayout(false);
             this.gBoxPiloto.PerformLayout();
             this.Opcoes.ResumeLayout(false);
@@ -1295,6 +1379,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sliderOpacidade)).EndInit();
             this.Lang.ResumeLayout(false);
             this.Lang.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.plFlag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.enFlag)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptFlag)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -1413,6 +1498,12 @@
         private System.Windows.Forms.Button bSavePilot;
         private System.Windows.Forms.Label l_PName;
         private System.Windows.Forms.TextBox t_PName;
+        private System.Windows.Forms.PictureBox plFlag;
+        private System.Windows.Forms.RadioButton pl;
+        private System.Windows.Forms.ToolStripMenuItem polacoToolStripMenuItem;
+        private System.Windows.Forms.GroupBox gBoxMetodo;
+        private System.Windows.Forms.RadioButton rB_new;
+        private System.Windows.Forms.RadioButton rB_old;
     }
 }
 
