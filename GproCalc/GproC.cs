@@ -754,7 +754,7 @@ namespace carWindow
             {
 
                 tBoxFelicidade.Text = Math.Round((135.0107 - 0.10172 * Convert.ToDouble(exp.Text) - 0.30014 * Convert.ToDouble(ti.Text))).ToString();
-                tBoxValor.Text = Math.Round((((Convert.ToDouble(ti.Text) * -0.2931) + 130.61) / 2)).ToString();
+                tBoxValor.Text = Math.Round((135.0107 - 0.10172 * Convert.ToDouble(exp.Text) - 0.30014 * Convert.ToDouble(ti.Text))/2).ToString();
             }
             catch { MessageBox.Show(erroP, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); }
 

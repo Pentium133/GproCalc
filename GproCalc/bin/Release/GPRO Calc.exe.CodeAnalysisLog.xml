@@ -6,7 +6,7 @@
    <Modules>
     <Module Name="gpro calc.exe">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2012-05-16 18:09:50Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2012-05-16 18:29:35Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'GPRO Calc.exe' with a strong name key.</Issue>
       </Message>
      </Messages>
