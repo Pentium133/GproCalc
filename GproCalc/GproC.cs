@@ -10,7 +10,6 @@ using System.IO;
 using System.Diagnostics;
 
 
-
 namespace carWindow
 {
     public partial class GproCalc : Form
@@ -22,22 +21,86 @@ namespace carWindow
         string erroLerFile;
         string erroFileInvalido;
         string erroGravarFile;
+        string newPath;
 
         public GproCalc()
         {
             InitializeComponent();
 
             
-
             if (GPROCalc.Properties.Settings.Default.Language == "EN")
             {
                 en.Checked = true;
-                mudaParaEN();
+                changeToEN();
             }
 
             if (GPROCalc.Properties.Settings.Default.AlwaysOnTop == true)
             {
                 sempreTopo();
+            }
+
+            loadDrivers();
+        }
+
+
+        private void loadDrivers()
+        {
+
+            string path = Path.GetDirectoryName(Application.ExecutablePath);
+            newPath = System.IO.Path.Combine(path, "Pilots");
+
+            System.IO.Directory.CreateDirectory(newPath);
+
+            PilotList.Items.Clear();
+
+            string[] filePaths = Directory.GetFiles(newPath, "*.gcp");
+            try
+            {
+                foreach (string pilot in filePaths)
+                {
+                    string name = pilot.Substring(newPath.Length + 1, pilot.Length - newPath.Length - 5);
+                    PilotList.Items.Add(name);
+                }
+            }
+            catch { }
+        }
+
+        private void loadDrivers(int pilotNumber)
+        {
+
+            string path = Path.GetDirectoryName(Application.ExecutablePath);
+            newPath = System.IO.Path.Combine(path, "Pilots");
+
+            System.IO.Directory.CreateDirectory(newPath);
+
+            string[] filePaths = Directory.GetFiles(newPath, "*.gcp");
+
+
+            System.IO.StreamReader file = new System.IO.StreamReader(filePaths[pilotNumber]);
+            //read
+            if (file.ReadLine() == "//GPRO calc pilot")
+            {
+                try
+                {
+
+                    conc.Text = file.ReadLine();
+                    tal.Text = file.ReadLine();
+                    agr.Text = file.ReadLine();
+                    exp.Text = file.ReadLine();
+                    ti.Text = file.ReadLine();
+                    stam.Text = file.ReadLine();
+                    cari.Text = file.ReadLine();
+                    motv.Text = file.ReadLine();
+                    peso.Text = file.ReadLine();
+                    t_PName.Text = file.ReadLine();
+                    
+                }
+                catch
+                {
+                    MessageBox.Show(erroLerFile, erro, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                file.Close();
+
             }
         }
 
@@ -215,16 +278,16 @@ namespace carWindow
             this.conc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(CheckKeys);
         }
 #endregion
-        #region traducoes
+        #region translation
         private void en_CheckedChanged(object sender, EventArgs e)
         {
-            mudaParaEN();
+            changeToEN();
         }
         private void pt_CheckedChanged(object sender, EventArgs e)
         {
-            mudaParaPT();
+            changeToPT();
         }
-        private void mudaParaEN()
+        private void changeToEN()
         {
             englishToolStripMenuItem.Checked = true;
             portugêsToolStripMenuItem.Checked = false;
@@ -256,6 +319,8 @@ namespace carWindow
             lTemp2.Text = "Temperature";
             lTemp1.Text = "Temperature";
             lOpacidade.Text = "Opacity";
+            labelPilotList.Text = "Choose Saved Pilot";
+            l_PName.Text = "Pilot Name";
 
             //Buttons
             bSec_molh.Text = "Dry --> Wet";
@@ -264,6 +329,7 @@ namespace carWindow
             bCalcAjuste.Text = "Calculate";
             bMetePrincipal.Text = "Copy to Main Setup";
             bCleanPilot.Text = "Clear";
+            bSavePilot.Text = "Save";
 
             //groupbox
             gBoxQ1Q2.Text = "Convert from Q1 to Q2";
@@ -308,7 +374,7 @@ namespace carWindow
             erroGravarFile = "Error while saving file";
         }
 
-        private void mudaParaPT()
+        private void changeToPT()
         {
             englishToolStripMenuItem.Checked = false;
             portugêsToolStripMenuItem.Checked = true;
@@ -340,6 +406,8 @@ namespace carWindow
             lTemp2.Text = "Temperatura";
             lTemp1.Text = "Temperatura";
             lOpacidade.Text = "Opacidade";
+            labelPilotList.Text = "Escolher Piloto";
+            l_PName.Text = "Nome do Piloto Gravado";
 
             //botoes
             bSec_molh.Text = "Seco --> Molhado";
@@ -348,6 +416,7 @@ namespace carWindow
             bCalcAjuste.Text = "Calcular";
             bMetePrincipal.Text = "Copiar para Ajuste Principal";
             bCleanPilot.Text = "Limpar";
+            bSavePilot.Text = "Guardar";
 
             //groupbox
             gBoxCarro.Text = "Ajuste do Carro";
@@ -407,7 +476,7 @@ namespace carWindow
                 //save
                 try
                 {
-                    fs.WriteLine("//GPRO calc file");
+                    fs.WriteLine("//GPRO calc file - new");
                     fs.WriteLine("{0}", conc.Text);
                     fs.WriteLine("{0}", tal.Text);
                     fs.WriteLine("{0}", agr.Text);
@@ -429,6 +498,8 @@ namespace carWindow
                     fs.WriteLine("{0}", tBoxTemp2.Text);
                     fs.WriteLine("{0}", tBoxHum1.Text);
                     fs.WriteLine("{0}", tBoxHum2.Text);
+
+                    fs.WriteLine("{0}", t_PName.Text);
                     
                 }
                 catch { MessageBox.Show(erroGravarFile, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -443,14 +514,15 @@ namespace carWindow
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            if (saveFileDialog1.FileName != "")
+            if (openFileDialog1.FileName != "")
             {
                 System.IO.StreamReader file = new System.IO.StreamReader(openFileDialog1.FileName);
                 //read
-                if (file.ReadLine() == "//GPRO calc file")
+                if (file.ReadLine() == "//GPRO calc file - new")
                 {
                     try
                     {
+
                         conc.Text = file.ReadLine();
                         tal.Text = file.ReadLine();
                         agr.Text = file.ReadLine();
@@ -472,6 +544,9 @@ namespace carWindow
                         tBoxTemp2.Text = file.ReadLine();
                         tBoxHum1.Text = file.ReadLine();
                         tBoxHum2.Text = file.ReadLine();
+
+                        t_PName.Text = file.ReadLine();
+        
                     }
                     catch { MessageBox.Show(erroLerFile, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 }
@@ -632,6 +707,7 @@ namespace carWindow
             cari.Text = "0";
             motv.Text = "0";
             peso.Text = "0";
+            t_PName.Text = "Name";
 
             calc_window_Click(sender,e);
 
@@ -719,6 +795,45 @@ namespace carWindow
             suspensao.SelectAll();
         }
         #endregion
+
+        private void bSavePilot_Click(object sender, EventArgs e)
+        {
+            string path = newPath + "\\" + t_PName.Text + ".gcp";
+            Debug.WriteLine(path);
+            using (System.IO.StreamWriter fs = new System.IO.StreamWriter(path))
+            
+            //save
+            try
+            {
+                fs.WriteLine("//GPRO calc pilot");
+                fs.WriteLine("{0}", conc.Text);
+                fs.WriteLine("{0}", tal.Text);
+                fs.WriteLine("{0}", agr.Text);
+                fs.WriteLine("{0}", exp.Text);
+                fs.WriteLine("{0}", ti.Text);
+                fs.WriteLine("{0}", stam.Text);
+                fs.WriteLine("{0}", cari.Text);
+                fs.WriteLine("{0}", motv.Text);
+                fs.WriteLine("{0}", peso.Text);
+                fs.WriteLine("{0}", t_PName.Text);
+                fs.Close();
+            }
+            catch 
+            { 
+                MessageBox.Show(erroGravarFile, erro, MessageBoxButtons.OK, MessageBoxIcon.Error); 
+            }
+             loadDrivers();
+                
+         }
+            
+        
+
+        private void PilotList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Load Selected Pilot
+            loadDrivers(PilotList.SelectedIndex);
+        }
+
     }
 }
 

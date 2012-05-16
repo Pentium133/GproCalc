@@ -76,6 +76,11 @@
             this.tBoxFelicidade = new System.Windows.Forms.TextBox();
             this.lFelicidade = new System.Windows.Forms.Label();
             this.gBoxPiloto = new System.Windows.Forms.GroupBox();
+            this.t_PName = new System.Windows.Forms.TextBox();
+            this.l_PName = new System.Windows.Forms.Label();
+            this.bSavePilot = new System.Windows.Forms.Button();
+            this.labelPilotList = new System.Windows.Forms.Label();
+            this.PilotList = new System.Windows.Forms.ComboBox();
             this.bCleanPilot = new System.Windows.Forms.Button();
             this.motv = new System.Windows.Forms.TextBox();
             this.lMotiv = new System.Windows.Forms.Label();
@@ -151,7 +156,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 27);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(607, 396);
+            this.tabControl1.Size = new System.Drawing.Size(616, 455);
             this.tabControl1.TabIndex = 1;
             // 
             // conversor
@@ -162,7 +167,7 @@
             this.conversor.Location = new System.Drawing.Point(4, 22);
             this.conversor.Name = "conversor";
             this.conversor.Padding = new System.Windows.Forms.Padding(3);
-            this.conversor.Size = new System.Drawing.Size(599, 370);
+            this.conversor.Size = new System.Drawing.Size(608, 429);
             this.conversor.TabIndex = 3;
             this.conversor.Text = "Conversor";
             this.conversor.UseVisualStyleBackColor = true;
@@ -179,7 +184,7 @@
             this.gBoxRain.Controls.Add(this.asaD2);
             this.gBoxRain.Location = new System.Drawing.Point(245, 7);
             this.gBoxRain.Name = "gBoxRain";
-            this.gBoxRain.Size = new System.Drawing.Size(348, 185);
+            this.gBoxRain.Size = new System.Drawing.Size(351, 193);
             this.gBoxRain.TabIndex = 1;
             this.gBoxRain.TabStop = false;
             this.gBoxRain.Text = "Chuva";
@@ -206,7 +211,7 @@
             // 
             // suspensao2
             // 
-            this.suspensao2.Location = new System.Drawing.Point(236, 146);
+            this.suspensao2.Location = new System.Drawing.Point(236, 159);
             this.suspensao2.Name = "suspensao2";
             this.suspensao2.ReadOnly = true;
             this.suspensao2.Size = new System.Drawing.Size(100, 20);
@@ -214,7 +219,7 @@
             // 
             // cambio2
             // 
-            this.cambio2.Location = new System.Drawing.Point(236, 120);
+            this.cambio2.Location = new System.Drawing.Point(236, 133);
             this.cambio2.Name = "cambio2";
             this.cambio2.ReadOnly = true;
             this.cambio2.Size = new System.Drawing.Size(100, 20);
@@ -222,7 +227,7 @@
             // 
             // freios2
             // 
-            this.freios2.Location = new System.Drawing.Point(236, 94);
+            this.freios2.Location = new System.Drawing.Point(236, 107);
             this.freios2.Name = "freios2";
             this.freios2.ReadOnly = true;
             this.freios2.Size = new System.Drawing.Size(100, 20);
@@ -230,7 +235,7 @@
             // 
             // motor2
             // 
-            this.motor2.Location = new System.Drawing.Point(236, 68);
+            this.motor2.Location = new System.Drawing.Point(236, 81);
             this.motor2.Name = "motor2";
             this.motor2.ReadOnly = true;
             this.motor2.Size = new System.Drawing.Size(100, 20);
@@ -238,7 +243,7 @@
             // 
             // asaT2
             // 
-            this.asaT2.Location = new System.Drawing.Point(236, 42);
+            this.asaT2.Location = new System.Drawing.Point(236, 55);
             this.asaT2.Name = "asaT2";
             this.asaT2.ReadOnly = true;
             this.asaT2.Size = new System.Drawing.Size(100, 20);
@@ -246,7 +251,7 @@
             // 
             // asaD2
             // 
-            this.asaD2.Location = new System.Drawing.Point(236, 16);
+            this.asaD2.Location = new System.Drawing.Point(236, 29);
             this.asaD2.Name = "asaD2";
             this.asaD2.ReadOnly = true;
             this.asaD2.Size = new System.Drawing.Size(100, 20);
@@ -264,16 +269,16 @@
             this.gBoxQ1Q2.Controls.Add(this.asaT3);
             this.gBoxQ1Q2.Controls.Add(this.asaD3);
             this.gBoxQ1Q2.Controls.Add(this.bCalcTempHum);
-            this.gBoxQ1Q2.Location = new System.Drawing.Point(7, 198);
+            this.gBoxQ1Q2.Location = new System.Drawing.Point(7, 206);
             this.gBoxQ1Q2.Name = "gBoxQ1Q2";
-            this.gBoxQ1Q2.Size = new System.Drawing.Size(586, 166);
+            this.gBoxQ1Q2.Size = new System.Drawing.Size(589, 191);
             this.gBoxQ1Q2.TabIndex = 2;
             this.gBoxQ1Q2.TabStop = false;
             this.gBoxQ1Q2.Text = "Conversor de Q1 para Q2";
             // 
             // bMetePrincipal
             // 
-            this.bMetePrincipal.Location = new System.Drawing.Point(171, 111);
+            this.bMetePrincipal.Location = new System.Drawing.Point(171, 133);
             this.bMetePrincipal.Name = "bMetePrincipal";
             this.bMetePrincipal.Size = new System.Drawing.Size(146, 33);
             this.bMetePrincipal.TabIndex = 9;
@@ -287,7 +292,7 @@
             this.gBoxQ2.Controls.Add(this.lHum2);
             this.gBoxQ2.Controls.Add(this.tBoxTemp2);
             this.gBoxQ2.Controls.Add(this.tBoxHum2);
-            this.gBoxQ2.Location = new System.Drawing.Point(171, 23);
+            this.gBoxQ2.Location = new System.Drawing.Point(171, 34);
             this.gBoxQ2.Name = "gBoxQ2";
             this.gBoxQ2.Size = new System.Drawing.Size(146, 82);
             this.gBoxQ2.TabIndex = 1;
@@ -338,7 +343,7 @@
             this.gBoxQ1.Controls.Add(this.lHum1);
             this.gBoxQ1.Controls.Add(this.tBoxTemp1);
             this.gBoxQ1.Controls.Add(this.tBoxHum1);
-            this.gBoxQ1.Location = new System.Drawing.Point(10, 23);
+            this.gBoxQ1.Location = new System.Drawing.Point(10, 34);
             this.gBoxQ1.Name = "gBoxQ1";
             this.gBoxQ1.Size = new System.Drawing.Size(146, 82);
             this.gBoxQ1.TabIndex = 0;
@@ -385,7 +390,7 @@
             // 
             // suspensao3
             // 
-            this.suspensao3.Location = new System.Drawing.Point(474, 134);
+            this.suspensao3.Location = new System.Drawing.Point(474, 148);
             this.suspensao3.Name = "suspensao3";
             this.suspensao3.ReadOnly = true;
             this.suspensao3.Size = new System.Drawing.Size(100, 20);
@@ -393,7 +398,7 @@
             // 
             // cambios3
             // 
-            this.cambios3.Location = new System.Drawing.Point(474, 111);
+            this.cambios3.Location = new System.Drawing.Point(474, 125);
             this.cambios3.Name = "cambios3";
             this.cambios3.ReadOnly = true;
             this.cambios3.Size = new System.Drawing.Size(100, 20);
@@ -401,7 +406,7 @@
             // 
             // freios3
             // 
-            this.freios3.Location = new System.Drawing.Point(474, 88);
+            this.freios3.Location = new System.Drawing.Point(474, 102);
             this.freios3.Name = "freios3";
             this.freios3.ReadOnly = true;
             this.freios3.Size = new System.Drawing.Size(100, 20);
@@ -409,7 +414,7 @@
             // 
             // motor3
             // 
-            this.motor3.Location = new System.Drawing.Point(474, 65);
+            this.motor3.Location = new System.Drawing.Point(474, 79);
             this.motor3.Name = "motor3";
             this.motor3.ReadOnly = true;
             this.motor3.Size = new System.Drawing.Size(100, 20);
@@ -417,7 +422,7 @@
             // 
             // asaT3
             // 
-            this.asaT3.Location = new System.Drawing.Point(474, 42);
+            this.asaT3.Location = new System.Drawing.Point(474, 56);
             this.asaT3.Name = "asaT3";
             this.asaT3.ReadOnly = true;
             this.asaT3.Size = new System.Drawing.Size(100, 20);
@@ -425,7 +430,7 @@
             // 
             // asaD3
             // 
-            this.asaD3.Location = new System.Drawing.Point(474, 19);
+            this.asaD3.Location = new System.Drawing.Point(474, 33);
             this.asaD3.Name = "asaD3";
             this.asaD3.ReadOnly = true;
             this.asaD3.Size = new System.Drawing.Size(100, 20);
@@ -433,7 +438,7 @@
             // 
             // bCalcTempHum
             // 
-            this.bCalcTempHum.Location = new System.Drawing.Point(10, 111);
+            this.bCalcTempHum.Location = new System.Drawing.Point(10, 133);
             this.bCalcTempHum.Name = "bCalcTempHum";
             this.bCalcTempHum.Size = new System.Drawing.Size(146, 33);
             this.bCalcTempHum.TabIndex = 2;
@@ -457,7 +462,7 @@
             this.gBoxCarro.Controls.Add(this.lAsaD);
             this.gBoxCarro.Location = new System.Drawing.Point(7, 7);
             this.gBoxCarro.Name = "gBoxCarro";
-            this.gBoxCarro.Size = new System.Drawing.Size(232, 185);
+            this.gBoxCarro.Size = new System.Drawing.Size(232, 193);
             this.gBoxCarro.TabIndex = 0;
             this.gBoxCarro.TabStop = false;
             this.gBoxCarro.Text = "Ajuste do Carro";
@@ -589,7 +594,7 @@
             this.piloto.Location = new System.Drawing.Point(4, 22);
             this.piloto.Name = "piloto";
             this.piloto.Padding = new System.Windows.Forms.Padding(3);
-            this.piloto.Size = new System.Drawing.Size(599, 370);
+            this.piloto.Size = new System.Drawing.Size(608, 429);
             this.piloto.TabIndex = 1;
             this.piloto.Text = "Piloto";
             this.piloto.UseVisualStyleBackColor = true;
@@ -604,9 +609,9 @@
             this.gBoxAjust.Controls.Add(this.tBoxValor);
             this.gBoxAjust.Controls.Add(this.tBoxFelicidade);
             this.gBoxAjust.Controls.Add(this.lFelicidade);
-            this.gBoxAjust.Location = new System.Drawing.Point(257, 7);
+            this.gBoxAjust.Location = new System.Drawing.Point(289, 7);
             this.gBoxAjust.Name = "gBoxAjust";
-            this.gBoxAjust.Size = new System.Drawing.Size(336, 357);
+            this.gBoxAjust.Size = new System.Drawing.Size(313, 417);
             this.gBoxAjust.TabIndex = 0;
             this.gBoxAjust.TabStop = false;
             this.gBoxAjust.Text = "Janela de Ajuste";
@@ -623,7 +628,7 @@
             // tBoxTotal
             // 
             this.tBoxTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tBoxTotal.Location = new System.Drawing.Point(230, 92);
+            this.tBoxTotal.Location = new System.Drawing.Point(191, 92);
             this.tBoxTotal.Name = "tBoxTotal";
             this.tBoxTotal.ReadOnly = true;
             this.tBoxTotal.Size = new System.Drawing.Size(100, 20);
@@ -633,9 +638,9 @@
             // 
             this.bCalcAjuste.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bCalcAjuste.Location = new System.Drawing.Point(90, 36);
+            this.bCalcAjuste.Location = new System.Drawing.Point(44, 36);
             this.bCalcAjuste.Name = "bCalcAjuste";
-            this.bCalcAjuste.Size = new System.Drawing.Size(166, 35);
+            this.bCalcAjuste.Size = new System.Drawing.Size(221, 35);
             this.bCalcAjuste.TabIndex = 0;
             this.bCalcAjuste.Text = "Calcular";
             this.bCalcAjuste.UseVisualStyleBackColor = true;
@@ -653,16 +658,17 @@
             // txtAjuste
             // 
             this.txtAjuste.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtAjuste.Location = new System.Drawing.Point(6, 217);
+            this.txtAjuste.Location = new System.Drawing.Point(12, 229);
             this.txtAjuste.Name = "txtAjuste";
             this.txtAjuste.ReadOnly = true;
-            this.txtAjuste.Size = new System.Drawing.Size(324, 134);
+            this.txtAjuste.Size = new System.Drawing.Size(295, 174);
             this.txtAjuste.TabIndex = 5;
             this.txtAjuste.Text = resources.GetString("txtAjuste.Text");
             // 
             // tBoxValor
             // 
-            this.tBoxValor.Location = new System.Drawing.Point(230, 128);
+            this.tBoxValor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tBoxValor.Location = new System.Drawing.Point(190, 128);
             this.tBoxValor.Name = "tBoxValor";
             this.tBoxValor.ReadOnly = true;
             this.tBoxValor.Size = new System.Drawing.Size(100, 20);
@@ -670,7 +676,8 @@
             // 
             // tBoxFelicidade
             // 
-            this.tBoxFelicidade.Location = new System.Drawing.Point(230, 163);
+            this.tBoxFelicidade.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.tBoxFelicidade.Location = new System.Drawing.Point(190, 163);
             this.tBoxFelicidade.Name = "tBoxFelicidade";
             this.tBoxFelicidade.ReadOnly = true;
             this.tBoxFelicidade.Size = new System.Drawing.Size(100, 20);
@@ -687,6 +694,11 @@
             // 
             // gBoxPiloto
             // 
+            this.gBoxPiloto.Controls.Add(this.t_PName);
+            this.gBoxPiloto.Controls.Add(this.l_PName);
+            this.gBoxPiloto.Controls.Add(this.bSavePilot);
+            this.gBoxPiloto.Controls.Add(this.labelPilotList);
+            this.gBoxPiloto.Controls.Add(this.PilotList);
             this.gBoxPiloto.Controls.Add(this.bCleanPilot);
             this.gBoxPiloto.Controls.Add(this.motv);
             this.gBoxPiloto.Controls.Add(this.lMotiv);
@@ -708,16 +720,61 @@
             this.gBoxPiloto.Controls.Add(this.lConcentra);
             this.gBoxPiloto.Location = new System.Drawing.Point(7, 7);
             this.gBoxPiloto.Name = "gBoxPiloto";
-            this.gBoxPiloto.Size = new System.Drawing.Size(244, 357);
+            this.gBoxPiloto.Size = new System.Drawing.Size(276, 417);
             this.gBoxPiloto.TabIndex = 1;
             this.gBoxPiloto.TabStop = false;
             this.gBoxPiloto.Text = "Piloto";
             // 
+            // t_PName
+            // 
+            this.t_PName.Location = new System.Drawing.Point(90, 83);
+            this.t_PName.Name = "t_PName";
+            this.t_PName.Size = new System.Drawing.Size(100, 20);
+            this.t_PName.TabIndex = 23;
+            this.t_PName.Text = "Name";
+            // 
+            // l_PName
+            // 
+            this.l_PName.AutoSize = true;
+            this.l_PName.Location = new System.Drawing.Point(7, 86);
+            this.l_PName.Name = "l_PName";
+            this.l_PName.Size = new System.Drawing.Size(79, 13);
+            this.l_PName.TabIndex = 22;
+            this.l_PName.Text = "Nome do Piloto";
+            // 
+            // bSavePilot
+            // 
+            this.bSavePilot.Location = new System.Drawing.Point(8, 369);
+            this.bSavePilot.Name = "bSavePilot";
+            this.bSavePilot.Size = new System.Drawing.Size(95, 33);
+            this.bSavePilot.TabIndex = 21;
+            this.bSavePilot.Text = "Guardar";
+            this.bSavePilot.UseVisualStyleBackColor = true;
+            this.bSavePilot.Click += new System.EventHandler(this.bSavePilot_Click);
+            // 
+            // labelPilotList
+            // 
+            this.labelPilotList.AutoSize = true;
+            this.labelPilotList.Location = new System.Drawing.Point(7, 22);
+            this.labelPilotList.Name = "labelPilotList";
+            this.labelPilotList.Size = new System.Drawing.Size(121, 13);
+            this.labelPilotList.TabIndex = 20;
+            this.labelPilotList.Text = "Escolher Piloto Gravado";
+            // 
+            // PilotList
+            // 
+            this.PilotList.FormattingEnabled = true;
+            this.PilotList.Location = new System.Drawing.Point(10, 42);
+            this.PilotList.Name = "PilotList";
+            this.PilotList.Size = new System.Drawing.Size(223, 21);
+            this.PilotList.TabIndex = 19;
+            this.PilotList.SelectedIndexChanged += new System.EventHandler(this.PilotList_SelectedIndexChanged);
+            // 
             // bCleanPilot
             // 
-            this.bCleanPilot.Location = new System.Drawing.Point(10, 290);
+            this.bCleanPilot.Location = new System.Drawing.Point(109, 369);
             this.bCleanPilot.Name = "bCleanPilot";
-            this.bCleanPilot.Size = new System.Drawing.Size(223, 33);
+            this.bCleanPilot.Size = new System.Drawing.Size(95, 33);
             this.bCleanPilot.TabIndex = 18;
             this.bCleanPilot.Text = "Limpar";
             this.bCleanPilot.UseVisualStyleBackColor = true;
@@ -726,7 +783,7 @@
             // motv
             // 
             this.motv.AllowDrop = true;
-            this.motv.Location = new System.Drawing.Point(133, 203);
+            this.motv.Location = new System.Drawing.Point(90, 308);
             this.motv.MaxLength = 3;
             this.motv.Name = "motv";
             this.motv.Size = new System.Drawing.Size(100, 20);
@@ -738,7 +795,7 @@
             // lMotiv
             // 
             this.lMotiv.AutoSize = true;
-            this.lMotiv.Location = new System.Drawing.Point(7, 206);
+            this.lMotiv.Location = new System.Drawing.Point(7, 311);
             this.lMotiv.Name = "lMotiv";
             this.lMotiv.Size = new System.Drawing.Size(57, 13);
             this.lMotiv.TabIndex = 14;
@@ -747,7 +804,7 @@
             // stam
             // 
             this.stam.AllowDrop = true;
-            this.stam.Location = new System.Drawing.Point(133, 151);
+            this.stam.Location = new System.Drawing.Point(90, 254);
             this.stam.MaxLength = 3;
             this.stam.Name = "stam";
             this.stam.Size = new System.Drawing.Size(100, 20);
@@ -759,7 +816,7 @@
             // peso
             // 
             this.peso.AllowDrop = true;
-            this.peso.Location = new System.Drawing.Point(133, 229);
+            this.peso.Location = new System.Drawing.Point(90, 334);
             this.peso.MaxLength = 3;
             this.peso.Name = "peso";
             this.peso.Size = new System.Drawing.Size(100, 20);
@@ -771,7 +828,7 @@
             // ti
             // 
             this.ti.AllowDrop = true;
-            this.ti.Location = new System.Drawing.Point(133, 125);
+            this.ti.Location = new System.Drawing.Point(90, 228);
             this.ti.MaxLength = 3;
             this.ti.Name = "ti";
             this.ti.Size = new System.Drawing.Size(100, 20);
@@ -783,7 +840,7 @@
             // cari
             // 
             this.cari.AllowDrop = true;
-            this.cari.Location = new System.Drawing.Point(133, 177);
+            this.cari.Location = new System.Drawing.Point(90, 280);
             this.cari.MaxLength = 3;
             this.cari.Name = "cari";
             this.cari.Size = new System.Drawing.Size(100, 20);
@@ -795,7 +852,7 @@
             // lPeso
             // 
             this.lPeso.AutoSize = true;
-            this.lPeso.Location = new System.Drawing.Point(7, 232);
+            this.lPeso.Location = new System.Drawing.Point(7, 337);
             this.lPeso.Name = "lPeso";
             this.lPeso.Size = new System.Drawing.Size(31, 13);
             this.lPeso.TabIndex = 16;
@@ -804,19 +861,18 @@
             // exp
             // 
             this.exp.AllowDrop = true;
-            this.exp.Location = new System.Drawing.Point(133, 99);
+            this.exp.Location = new System.Drawing.Point(90, 200);
             this.exp.MaxLength = 3;
             this.exp.Name = "exp";
             this.exp.Size = new System.Drawing.Size(100, 20);
             this.exp.TabIndex = 7;
             this.exp.Text = "0";
-            this.exp.Enter += new System.EventHandler(this.exp_Enter);
             this.exp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.exp_KeyPress);
             // 
             // agr
             // 
             this.agr.AllowDrop = true;
-            this.agr.Location = new System.Drawing.Point(133, 73);
+            this.agr.Location = new System.Drawing.Point(90, 174);
             this.agr.MaxLength = 3;
             this.agr.Name = "agr";
             this.agr.Size = new System.Drawing.Size(100, 20);
@@ -828,7 +884,7 @@
             // tal
             // 
             this.tal.AllowDrop = true;
-            this.tal.Location = new System.Drawing.Point(133, 47);
+            this.tal.Location = new System.Drawing.Point(90, 148);
             this.tal.MaxLength = 3;
             this.tal.Name = "tal";
             this.tal.Size = new System.Drawing.Size(100, 20);
@@ -840,7 +896,7 @@
             // conc
             // 
             this.conc.AllowDrop = true;
-            this.conc.Location = new System.Drawing.Point(133, 21);
+            this.conc.Location = new System.Drawing.Point(90, 122);
             this.conc.MaxLength = 3;
             this.conc.Name = "conc";
             this.conc.Size = new System.Drawing.Size(100, 20);
@@ -852,7 +908,7 @@
             // lCarisma
             // 
             this.lCarisma.AutoSize = true;
-            this.lCarisma.Location = new System.Drawing.Point(7, 180);
+            this.lCarisma.Location = new System.Drawing.Point(7, 283);
             this.lCarisma.Name = "lCarisma";
             this.lCarisma.Size = new System.Drawing.Size(44, 13);
             this.lCarisma.TabIndex = 12;
@@ -861,7 +917,7 @@
             // lResist
             // 
             this.lResist.AutoSize = true;
-            this.lResist.Location = new System.Drawing.Point(7, 154);
+            this.lResist.Location = new System.Drawing.Point(7, 257);
             this.lResist.Name = "lResist";
             this.lResist.Size = new System.Drawing.Size(62, 13);
             this.lResist.TabIndex = 10;
@@ -870,7 +926,7 @@
             // lCTecn
             // 
             this.lCTecn.AutoSize = true;
-            this.lCTecn.Location = new System.Drawing.Point(7, 128);
+            this.lCTecn.Location = new System.Drawing.Point(7, 231);
             this.lCTecn.Name = "lCTecn";
             this.lCTecn.Size = new System.Drawing.Size(77, 13);
             this.lCTecn.TabIndex = 8;
@@ -879,7 +935,7 @@
             // lExp
             // 
             this.lExp.AutoSize = true;
-            this.lExp.Location = new System.Drawing.Point(7, 102);
+            this.lExp.Location = new System.Drawing.Point(7, 203);
             this.lExp.Name = "lExp";
             this.lExp.Size = new System.Drawing.Size(62, 13);
             this.lExp.TabIndex = 6;
@@ -888,7 +944,7 @@
             // lAgress
             // 
             this.lAgress.AutoSize = true;
-            this.lAgress.Location = new System.Drawing.Point(7, 76);
+            this.lAgress.Location = new System.Drawing.Point(7, 177);
             this.lAgress.Name = "lAgress";
             this.lAgress.Size = new System.Drawing.Size(73, 13);
             this.lAgress.TabIndex = 4;
@@ -897,7 +953,7 @@
             // lTalento
             // 
             this.lTalento.AutoSize = true;
-            this.lTalento.Location = new System.Drawing.Point(7, 50);
+            this.lTalento.Location = new System.Drawing.Point(7, 151);
             this.lTalento.Name = "lTalento";
             this.lTalento.Size = new System.Drawing.Size(43, 13);
             this.lTalento.TabIndex = 2;
@@ -906,7 +962,7 @@
             // lConcentra
             // 
             this.lConcentra.AutoSize = true;
-            this.lConcentra.Location = new System.Drawing.Point(7, 24);
+            this.lConcentra.Location = new System.Drawing.Point(7, 125);
             this.lConcentra.Name = "lConcentra";
             this.lConcentra.Size = new System.Drawing.Size(74, 13);
             this.lConcentra.TabIndex = 0;
@@ -919,7 +975,7 @@
             this.Opcoes.Location = new System.Drawing.Point(4, 22);
             this.Opcoes.Name = "Opcoes";
             this.Opcoes.Padding = new System.Windows.Forms.Padding(3);
-            this.Opcoes.Size = new System.Drawing.Size(599, 370);
+            this.Opcoes.Size = new System.Drawing.Size(608, 429);
             this.Opcoes.TabIndex = 2;
             this.Opcoes.Text = "Opções";
             this.Opcoes.UseVisualStyleBackColor = true;
@@ -930,9 +986,9 @@
             this.gBoxOtherOptions.Controls.Add(this.lOpacidade);
             this.gBoxOtherOptions.Controls.Add(this.sliderOpacidade);
             this.gBoxOtherOptions.Controls.Add(this.cBoxTopo);
-            this.gBoxOtherOptions.Location = new System.Drawing.Point(169, 7);
+            this.gBoxOtherOptions.Location = new System.Drawing.Point(220, 7);
             this.gBoxOtherOptions.Name = "gBoxOtherOptions";
-            this.gBoxOtherOptions.Size = new System.Drawing.Size(424, 140);
+            this.gBoxOtherOptions.Size = new System.Drawing.Size(382, 225);
             this.gBoxOtherOptions.TabIndex = 10;
             this.gBoxOtherOptions.TabStop = false;
             this.gBoxOtherOptions.Text = "Outros";
@@ -962,7 +1018,7 @@
             this.sliderOpacidade.Maximum = 100;
             this.sliderOpacidade.Minimum = 60;
             this.sliderOpacidade.Name = "sliderOpacidade";
-            this.sliderOpacidade.Size = new System.Drawing.Size(403, 45);
+            this.sliderOpacidade.Size = new System.Drawing.Size(353, 45);
             this.sliderOpacidade.TabIndex = 10;
             this.sliderOpacidade.TickFrequency = 5;
             this.sliderOpacidade.TickStyle = System.Windows.Forms.TickStyle.TopLeft;
@@ -989,7 +1045,7 @@
             this.Lang.Controls.Add(this.pt);
             this.Lang.Location = new System.Drawing.Point(7, 7);
             this.Lang.Name = "Lang";
-            this.Lang.Size = new System.Drawing.Size(156, 140);
+            this.Lang.Size = new System.Drawing.Size(207, 225);
             this.Lang.TabIndex = 0;
             this.Lang.TabStop = false;
             this.Lang.Text = "Língua";
@@ -1050,7 +1106,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(631, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(633, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menu";
             // 
@@ -1194,19 +1250,19 @@
             // 
             this.linkGpro.AutoSize = true;
             this.linkGpro.Dock = System.Windows.Forms.DockStyle.Right;
-            this.linkGpro.Location = new System.Drawing.Point(601, 24);
+            this.linkGpro.Location = new System.Drawing.Point(585, 24);
             this.linkGpro.Name = "linkGpro";
-            this.linkGpro.Size = new System.Drawing.Size(30, 13);
+            this.linkGpro.Size = new System.Drawing.Size(48, 13);
             this.linkGpro.TabIndex = 8;
             this.linkGpro.TabStop = true;
-            this.linkGpro.Text = "Gpro";
+            this.linkGpro.Text = "Gpro.net";
             this.linkGpro.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // GproCalc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 435);
+            this.ClientSize = new System.Drawing.Size(633, 488);
             this.Controls.Add(this.linkGpro);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
@@ -1352,6 +1408,11 @@
         private System.Windows.Forms.Button bCleanPilot;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem gproCalcGitHubToolStripMenuItem;
+        private System.Windows.Forms.Label labelPilotList;
+        private System.Windows.Forms.ComboBox PilotList;
+        private System.Windows.Forms.Button bSavePilot;
+        private System.Windows.Forms.Label l_PName;
+        private System.Windows.Forms.TextBox t_PName;
     }
 }
 
