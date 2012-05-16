@@ -249,15 +249,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:GproCalc"
-        "ProductCode" = "8:{347D7445-7812-401D-8B5B-1F3F9DFB34DE}"
-        "PackageCode" = "8:{6D6DB220-0272-4A0C-87EC-8C79BCC20873}"
+        "ProductCode" = "8:{BA142FC7-83C1-4740-90E8-E25C01D3B480}"
+        "PackageCode" = "8:{0EC84AA6-F250-488E-8730-48D9663972B2}"
         "UpgradeCode" = "8:{B3EC89FA-A753-47BD-A8E1-16A42D454661}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.6.0"
+        "ProductVersion" = "8:1.7.0"
         "Manufacturer" = "8:Ricardo Ribeiro"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:http://twitter.com/Ricardo01991"
@@ -809,7 +809,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_A4ECC9E319504C0F914DCB3D18BB5BF8"
             {
-            "SourcePath" = "8:..\\GproCalc\\obj\\x86\\Debug\\GPRO Calc.exe"
+            "SourcePath" = "8:..\\GproCalc\\obj\\x86\\Release\\GPRO Calc.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_11E915C3AE3D48A4A36A1AE732FBAD84"

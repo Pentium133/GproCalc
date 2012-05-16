@@ -345,8 +345,12 @@ namespace carWindow
             lTemp2.Text = "Temeperatura";
             lTemp1.Text = "Temeperatura";
             lOpacidade.Text = "Przezroczystość";
-            labelPilotList.Text = "Choose Saved Pilot";
+            labelPilotList.Text = "Wybierz zapisanego kierowcę";
             l_PName.Text = "Imię i nazwisko kierowcy";
+
+            //rbutton
+            rB_old.Text = "Stara metoda";
+            rB_new.Text = "Nowa metoda";
 
             //Buttons
             bSec_molh.Text = "Suche --> Mokre";
@@ -367,6 +371,7 @@ namespace carWindow
             gBoxPiloto.Text = "Kierowca";
             gBoxAjust.Text = "Okno ustawień";
             gBoxOtherOptions.Text = "Inne";
+            gBoxMetodo.Text = "Metoda";
 
             //Box
             cBoxTopo.Text = "Zawsze na wierzchu";
